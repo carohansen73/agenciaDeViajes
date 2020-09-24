@@ -5,6 +5,20 @@ function connect(){
     return $db;
 }
 
+function obtenerRegiones(){
+    //1- Abro la conexion
+    $db = connect();
+
+    //2-Enviar la consulta (preparar y ejecutar)
+    $query = $db->prepare('SELECT * FROM region');
+    $query->execute();
+
+    //3-procesar la respuesta para generar html
+    $region = $query->fetchAll(PDO::FETCH_OBJ);//arreglo con las tareas
+
+    return $region;
+    //4- cerrar la conexion (PDO lo hace solo)
+}
 /*DEVUELVE LA INFO DE LA BASE DE DATOS*/
 function getTour(){
 
@@ -18,14 +32,3 @@ function getTour(){
     return $tour;
 }
 
-function getDestino(){
-
-    $db=connect();/*HABRO LA CONEXION*/
-
-    $query=$db->prepare('SELECT * FROM region');/*ENVIAR LA CONSULTA*/
-    $query->execute();
-
-    $region=$query->fetchAll(PDO::FETCH_OBJ);/*OBTENGO LA RESPUESTA CON UN FETCHALL XQ SON MUCHOS*/
-
-    return $region;
-}

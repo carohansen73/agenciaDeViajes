@@ -15,26 +15,39 @@ function showTour (){/*mostrar*/
     include_once 'footer.php';
 }
 
-    function showRegion (){/*mostrar*/
-        include_once 'header.php';
-        
-        $regiones= getDestino();
- 
-        echo "<div class='producto'>";
-        foreach($regiones as $region){
-        
-        echo "<h4>$region->nombre</h4>";
-        echo "<h5>$region->informacion</h5>";
-        }
-     echo "</div>";
+function mostrarRegiones(){
 
+    include_once  'header.php';
 
-        
-        /*echo "<ul class='list-group'>";
-        foreach($regiones as $region){
-            echo "<li class='list-group-item'>$region->nombre | $region->informacion </li>";
-        }
-        echo '</ul>';*/
-        
-        include_once 'footer.php';
-    }
+    $regiones = obtenerRegiones();
+
+    /*echo ' <ul class="list-group mt-5">';
+    foreach ($regiones as $region){
+        echo"<li class='list-group-item'>$region->nombre | $region->informacion  
+        <a class='btn btn-danger btn-sm' href='eliminar/$region->id'> ELIMINAR </a> </li>";
+    };
+    echo '</ul>';*/
+
+    echo"
+        <div class='container-fluid'>
+            <div class='row'>";
+    foreach ($regiones as $region){
+        echo"
+        <div class='col mt-2'>
+            <div class='card' style='width: 18rem;'>
+                <img src='...' class='card-img-top' alt='...'>
+                <div class='card-body'>
+                    <h5 class='card-title'>$region->nombre </h5>
+                    <p class='card-text'> $region->informacion </p>
+                    <a href='#' class='btn btn-primary'>Go somewhere</a>
+                </div>
+            </div>
+        </div>";
+    };
+    echo "  
+    </div>
+    </div>";
+    
+
+    include_once  'footer.php';
+}
