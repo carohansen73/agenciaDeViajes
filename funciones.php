@@ -1,14 +1,15 @@
 <?php
 include_once 'baseDatos.php';
 
-function showTour (){/*mostrar*/
+function showTour ($id){/*mostrar*/
     include_once 'header.php';
     
-    $tours= getTour();
+
+    $tours= getTour($id);
     
     echo "<ul class='list-group'>";
     foreach($tours as $tour){
-        echo "<li class='list-group-item'>$tour->destino | $tour->paquete </li>";
+        echo "<li class='list-group-item'>$tour->destinos | $tour->paquete </li>";
     }
     echo '</ul>';
     
@@ -33,13 +34,13 @@ function mostrarRegiones(){
             <div class='row'>";
     foreach ($regiones as $region){
         echo"
-        <div class='col mt-2'>
+        <div class='col mt-5'>
             <div class='card' style='width: 18rem;'>
                 <img src='...' class='card-img-top' alt='...'>
                 <div class='card-body'>
                     <h5 class='card-title'>$region->nombre </h5>
                     <p class='card-text'> $region->informacion </p>
-                    <a href='#' class='btn btn-primary'>Go somewhere</a>
+                    <a href='region/$region->id' class='btn btn-primary'>Go somewhere</a>
                 </div>
             </div>
         </div>";
@@ -48,6 +49,6 @@ function mostrarRegiones(){
     </div>
     </div>";
     
-
+    
     include_once  'footer.php';
 }

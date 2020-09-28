@@ -23,8 +23,10 @@ switch ($params[0]) {
         mostrarRegiones();
     break;
     case 'region':
-            showTour();
-        break;  
+        if (isset($params[1]))
+            $id=$params[1];
+            showTour($id);
+    break;  
     default:
         echo('404 Page not found');
         break;

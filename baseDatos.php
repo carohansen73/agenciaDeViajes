@@ -20,12 +20,12 @@ function obtenerRegiones(){
     //4- cerrar la conexion (PDO lo hace solo)
 }
 /*DEVUELVE LA INFO DE LA BASE DE DATOS*/
-function getTour(){
+function getTour($id_region){
 
     $db=connect();/*HABRO LA CONEXION*/
 
-    $query=$db->prepare('SELECT * FROM tour');/*ENVIAR LA CONSULTA*/
-    $query->execute();
+    $query=$db->prepare('SELECT * FROM tour WHERE id_region = ?');/*ENVIAR LA CONSULTA*/
+    $query->execute([$id_region]);
 
     $tour=$query->fetchAll(PDO::FETCH_OBJ);/*OBTENGO LA RESPUESTA CON UN FETCHALL XQ SON MUCHOS*/
 
