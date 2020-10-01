@@ -42,7 +42,7 @@
       
     </ul>
     <span class="navbar-text">
-      <a class="nav-link"  href="">Iniciar Seccion</a>
+      <a class="nav-link"  href="">Iniciar Sesion</a>
     </span>
   </div>
 </nav>
