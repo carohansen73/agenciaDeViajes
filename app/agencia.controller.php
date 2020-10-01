@@ -24,7 +24,7 @@ class AgenciaController{
         //obtendo las regiones de la BBDD
         $tour = $this->model-> getTour($id);
         //mando las regiones a la funcion que las muestra
-        $this->view-> showTour($tour);
+        $this->view-> mostrarTour($tour);
     }
 
 }

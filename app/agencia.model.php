@@ -2,14 +2,14 @@
 
 class AgenciaModel{
 
-    function connect(){
-        $db = new PDO('mysql:host=localhost;'.'dbname=agencia_viajes;charset=utf8', 'root', '');
+    function conectar(){
+        $db = new PDO('mysql:host=localhost;'.'dbname=db_agenciaviajes;charset=utf8', 'root', '');
         return $db;
     }
 
     function obtenerRegiones(){
         //1- Abro la conexion
-         $db =$this-> connect();
+         $db =$this-> conectar();
 
         //2-Enviar la consulta (preparar y ejecutar)
         $query = $db->prepare('SELECT * FROM region');
@@ -25,7 +25,7 @@ class AgenciaModel{
     /*DEVUELVE LA INFO DE LA BASE DE DATOS*/
     function getTour($id_region){
 
-        $db =$this-> connect();/*ABRO LA CONEXION*/
+        $db =$this-> conectar();/*ABRO LA CONEXION*/
 
         $query=$db->prepare('SELECT * FROM tour WHERE id_region = ?');/*ENVIAR LA CONSULTA*/
         $query->execute([$id_region]);
