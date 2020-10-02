@@ -1,0 +1,29 @@
+<!-- formulario de alta de tarea -->
+<form action="insertar" method="POST" class="my-4">
+    <div class="row">
+        <div class="col-9">
+            <div class="form-group">
+                <label>Tour</label>
+                <input name="tour" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="form-group">
+                <label>Paquete</label>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Itinerario</label>
+        <textarea name="itinerario" class="form-control" rows="3"></textarea>
+    </div>
+
+<div class="form-group">
+        <label>Precio</label>
+        <textarea name="precio" class="form-control" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

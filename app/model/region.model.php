@@ -1,7 +1,17 @@
 <?php
 
-class AgenciaModel{
+class RegionModel{
 
+    private $db;
+
+    function __construct(){/*HABRO LA CONEXION*/
+       $this-> db= $this-> conectar();
+    }
+
+    private function conectar(){
+        $db = new PDO('mysql:host=localhost;'.'dbname=db_tareas;charset=utf8', 'root', '');
+        return $db;
+    }
     function conectar(){
         $db = new PDO('mysql:host=localhost;'.'dbname=db_agenciaviajes;charset=utf8', 'root', '');
         return $db;
@@ -22,16 +32,5 @@ class AgenciaModel{
         //4- cerrar la conexion (PDO lo hace solo)
     }
 
-    /*DEVUELVE LA INFO DE LA BASE DE DATOS*/
-    function getTour($id_region){
-
-        $db =$this-> conectar();/*ABRO LA CONEXION*/
-
-        $query=$db->prepare('SELECT * FROM tour WHERE id_region = ?');/*ENVIAR LA CONSULTA*/
-        $query->execute([$id_region]);
-
-        $tour=$query->fetchAll(PDO::FETCH_OBJ);/*OBTENGO LA RESPUESTA CON UN FETCHALL XQ SON MUCHOS*/
-
-        return $tour;
-    }
+    
 };

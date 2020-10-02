@@ -1,7 +1,8 @@
 <?php
 include_once 'header.php';
 include_once 'footer.php';
-include_once 'app/agencia.controller.php';
+include_once 'app/controller/region.controller.php';
+include_once 'app/controller/tour.controller.php';
 
 
 // defino la base url para la construccion de links con urls semánticas
@@ -19,16 +20,21 @@ $params = explode('/', $action);
 
 // determina que camino seguir según la acción
 switch ($params[0]) {
+    /*case 'iniciar':
+        $controller= new AuthController();
+        $controller->iniciarSecion();
+    break;*/
     case 'home':
-        $controller = new AgenciaController();
+        $controller = new RegionController();
         $controller->mostrarRegion();
     break;
     case 'region':
         if (isset($params[1]))
             $id=$params[1];
-            $controller =new AgenciaController();
+            $controller =new TourController();
             $controller->mostrarTour($id);
     break;  
+    
     default:
         echo('404 Page not found');
         break;
