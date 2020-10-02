@@ -1,10 +1,11 @@
 <?php
 
 class TourModel{
+    
     private $db;
 
-    function __construct(){/*HABRO LA CONEXION*/
-       $this-> db= $this-> conectar();
+    function __construct(){
+       $this->db= $this-> conectar();
     }
 
     private function conectar(){
@@ -12,34 +13,30 @@ class TourModel{
         return $db;
     }
 
-function obtenerTour($id_region){
+    function obtenerTour($id_region){
 
-    $db =$this-> conectar();/*ABRO LA CONEXION*/
+      
+        $query=$this->db->prepare('SELECT * FROM tour WHERE id_region = ?');
+        $query->execute([$id_region]);
 
-    $query=$db->prepare('SELECT * FROM tour WHERE id_region = ?');/*ENVIAR LA CONSULTA*/
-    $query->execute([$id_region]);
+        $tour=$query->fetchAll(PDO::FETCH_OBJ);
 
-    $tour=$query->fetchAll(PDO::FETCH_OBJ);/*OBTENGO LA RESPUESTA CON UN FETCHALL XQ SON MUCHOS*/
+        return $tour;
+    }
 
-    return $tour;
-}
-
-function insertarTour($destinos, $paquete,$itinerario,$precio){
+    function insertarTour($destinos, $paquete,$itinerario,$precio){
 
     
-    $query=$this->db->prepare('INSERT INTO tour (destinos, paquete, itinerario, precio) VALUES(?,?,?,?)');
+        $query=$this->db->prepare('INSERT INTO tour (destinos, paquete, itinerario, precio) VALUES(?,?,?,?)');
+        
+        $query->execute([$destinos, $paquete,$itinerario,$precio]);
+
+        return $this->db->lastInsertId($destinos, $paquete,$itinerario,$precio);
+    }   
+    function borrarTour($id){
+
+        $query=$this->db->prepare('DELETE FROM tour WHERE id =?');
+        $query->execute([$id]);
     
-    $query->execute([$destinos, $paquete,$itinerario,$precio]);
-
-
-  
-    //return $this->db->lastInsertId($titulo , $descripcion, $prioridad);/*obtengo id*/
-}
-function borrarTour($id){
-
-       
-    $query=$this->db->prepare('DELETE FROM tour WHERE id =?');
-    $query->execute([$id]);
-  
-}
+    }
 }

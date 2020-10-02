@@ -34,7 +34,10 @@ switch ($params[0]) {
             $controller =new TourController();
             $controller->mostrarTour($id);
     break;  
-    
+    case 'insertar':
+        $controller =new TourController();
+        $controller->insertarTour();
+    break;  
     default:
         echo('404 Page not found');
         break;

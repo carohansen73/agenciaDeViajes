@@ -1,4 +1,5 @@
-
+{include 'header.tpl'} 
+{include 'carusel.tpl'} 
     <main class="container"> <!-- inicio del contenido pricipal -->
        
         <div class='container-fluid'>
@@ -21,4 +22,4 @@
         </div>
         
     </main> <!-- fin del contenido principal -->
-{include 'footer.tpl'};
+{include 'footer.tpl'}

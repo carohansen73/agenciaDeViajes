@@ -4,11 +4,11 @@ require_once('libs/Smarty.class.php');
 
 class TourView{
 
-    function mostrarTour($tasks){
+    function mostrarTours($tours){
        
         $smarty=new smarty();
         
-        $smarty->assign('tasks', $tasks);
+        $smarty->assign('tours', $tours);
         
         $smarty->display('templates/mostrarTour.tpl');
     

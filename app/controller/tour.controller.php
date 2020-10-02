@@ -1,6 +1,7 @@
 <?php
 include_once 'app/view/tour.view.php';
 include_once 'app/model/tour.model.php';
+
 class TourController{
     private $model;
     private $view;
@@ -11,23 +12,23 @@ class TourController{
         $this->view = new TourView();
     }
     function mostrarTour($id){
-        //obtendo las regiones de la BBDD
+        
         $tour = $this->model-> obtenerTour($id);
-        //mando las regiones a la funcion que las muestra
-        $this->view-> mostrarTour($tour);
+       
+        $this->view-> mostrarTours($tour);
     }
     function insertarTour(){
     
-        $destinos=$_POST['titulo'];
-        $paquete=$_POST['descripcion'];
-        $itinerario=$_POST['titulo'];
-        $precio=$_POST['descripcion'];
+        $destinos=$_POST['destinos'];
+        $paquete=$_POST['paquete'];
+        $itinerario=$_POST['itinerario'];
+        $precio=$_POST['precio'];
 
     if( empty ($destinos) || empty ($paquete)|| empty ($itinerario)|| empty ($precio)){
     $this->view->mostrarErrorTour('Faltan datos obligatorios');
     die();
     }
-    //$id=$this->model->insertTask($destinos, $paquete,$itinerario,$precio);
+    $id=$this->model->insertarTour($destinos, $paquete,$itinerario,$precio);
 
     header("location: " .BASE_URL);
     }
