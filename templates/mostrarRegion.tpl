@@ -1,6 +1,6 @@
 {include 'header.tpl'} 
 {include 'carusel.tpl'} 
-    <main class="container"> <!-- inicio del contenido pricipal -->
+   
        
         <div class='container-fluid'>
         <div class='row'>
@@ -21,5 +21,5 @@
         </div>
         </div>
         
-    </main> <!-- fin del contenido principal -->
+    
 {include 'footer.tpl'}
