@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-10-03 16:11:58
+/* Smarty version 3.1.34-dev-7, created on 2020-10-03 18:36:14
   from 'C:\xampp\htdocs\AgenciadeViajes\templates\mostrarRegion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f7886ae190233_23764890',
+  'unifunc' => 'content_5f78a87e8e4864_25848984',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '883b4fbe9ddb03960e9ce478845b3152af11da1e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\AgenciadeViajes\\templates\\mostrarRegion.tpl',
-      1 => 1601682313,
+      1 => 1601742966,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5f7886ae190233_23764890 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f78a87e8e4864_25848984 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
 <?php $_smarty_tpl->_subTemplateRender('file:carusel.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -47,7 +47,8 @@ $_smarty_tpl->tpl_vars['region']->do_else = false;
 </h5>
                         <p class='card-text'> <?php echo $_smarty_tpl->tpl_vars['region']->value->informacion;?>
 </p>
-                        <a href='region/$region->id' class='btn btn-info'>Ver detalle</a>
+                        <a href='region/<?php echo $_smarty_tpl->tpl_vars['region']->value->id;?>
+' class='btn btn-info'>Ver detalle</a>
                     </div>
                 </div>
             </div>

@@ -25,6 +25,16 @@ class RegionModel{
         return $region;
      
     }
+    function insertarRegion($nombre, $informacion){
+
+        //2-Enviar la consulta(los datos), lindeo los parametros (?,?,?)
+        $query = $this->db->prepare('INSERT INTO region (nombre, informacion) VALUES (?,?)');
+        $query->execute([$nombre, $informacion]);
+
+        //3-no necesito obtener respuesta xq estoy insertando
+        return $this->db->lastInsertId();
+
+    }
 
     
 };
