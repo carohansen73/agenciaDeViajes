@@ -1,6 +1,5 @@
 <?php
-include_once 'header.php';
-include_once 'footer.php';
+
 include_once 'app/controller/region.controller.php';
 include_once 'app/controller/tour.controller.php';
 
