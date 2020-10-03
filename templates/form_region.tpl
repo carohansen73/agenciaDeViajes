@@ -1,4 +1,4 @@
-<form action="insertar" method="POST" class="my-4">
+<form action="InsertarRegion" method="POST" class="my-4">
     <div class="row">
         <div class="col-9">
             <div class="form-group">
