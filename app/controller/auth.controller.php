@@ -3,7 +3,6 @@
 
 class AuthController{
 
-    private $model;
     private $view;
 
     function __construct(){
@@ -16,7 +15,7 @@ class AuthController{
         $this->view-> mostrarFormLogin();
     }
 
-    function iniciarSecion(){
+    function iniciarSesion(){
 
         $email=$_POST['email'];
         $contraseña=$_POST['contraseña'];
@@ -29,5 +28,10 @@ class AuthController{
         
 
         header("location: " .BASE_URL);
+
+        function verificar(){
+
+            echo "aca se verifica";
+        }
     }
 }
