@@ -2,6 +2,7 @@
 
 include_once 'app/controller/region.controller.php';
 include_once 'app/controller/tour.controller.php';
+include_once 'app/controller/administradorController.php';
 
 
 // defino la base url para la construccion de links con urls semánticas
@@ -37,6 +38,9 @@ switch ($params[0]) {
         $controller =new TourController();
         $controller->insertarTour();
     break;  
+    case 'administrador':
+        $controller = new AdministradorController();
+        $controller->mostrarTabla();
     default:
         echo('404 Page not found');
         break;

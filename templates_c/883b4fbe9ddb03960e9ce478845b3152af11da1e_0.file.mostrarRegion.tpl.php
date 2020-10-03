@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-10-03 18:36:14
+/* Smarty version 3.1.34-dev-7, created on 2020-10-03 21:16:27
   from 'C:\xampp\htdocs\AgenciadeViajes\templates\mostrarRegion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f78a87e8e4864_25848984',
+  'unifunc' => 'content_5f78ce0b6ad6e9_48292771',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '883b4fbe9ddb03960e9ce478845b3152af11da1e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\AgenciadeViajes\\templates\\mostrarRegion.tpl',
-      1 => 1601742966,
+      1 => 1601750676,
       2 => 'file',
     ),
   ),
@@ -23,12 +23,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5f78a87e8e4864_25848984 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f78ce0b6ad6e9_48292771 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
 <?php $_smarty_tpl->_subTemplateRender('file:carusel.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
-   
        
         <div class='container-fluid'>
         <div class='row'>

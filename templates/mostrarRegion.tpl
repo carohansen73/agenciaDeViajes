@@ -1,6 +1,5 @@
 {include 'header.tpl'} 
 {include 'carusel.tpl'} 
-   
        
         <div class='container-fluid'>
         <div class='row'>
