@@ -3,18 +3,31 @@
 
 class AuthController{
 
+    private $model;
+    private $view;
+
+    function __construct(){
+       
+        $this->view = new AuthView();
+    }
+
+    function mostrarLogin($id){
+        
+        $this->view-> mostrarFormLogin();
+    }
+
     function iniciarSecion(){
 
-    $email=$_POST['titulo'];
-    $contraseña=$_POST['descripcion'];
+        $email=$_POST['email'];
+        $contraseña=$_POST['contraseña'];
 
 
-    if( empty ($email) || empty ($contraseña)){
-    $this->view->mostrarError('Faltan datos obligatorios');
-    die();
-    }
-    $id=$this->model->insertTask($email,$contraseña);
+        if( empty ($email) || empty ($contraseña)){
+        $this->view->mostrarError('Faltan datos obligatorios');
+        die();
+        }
+        
 
-    header("location: " .BASE_URL);
+        header("location: " .BASE_URL);
     }
 }

@@ -2,6 +2,11 @@
 
 class AuthView{
 
+    function mostrarFormLogin() {
+        
+        $smarty = new Smarty();
+        $smarty->display('templates/form_login.tpl');
+    }
 
 
     function mostrarError($msg){
