@@ -24,6 +24,9 @@ class TourView{
         $smarty->display('templates/mostrarTour.tpl');
   
     }
+    function insetarCambios(){
+        echo "hola";
+    }
 
 
 }

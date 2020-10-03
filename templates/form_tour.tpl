@@ -1,5 +1,5 @@
-<!-- formulario de alta de tarea -->
-<form action="insertar" method="POST" class="my-4">
+<!-- formulario de alta de tour -->
+<form action="insertarTour" method="POST" class="my-4">
     <div class="row">
         <div class="col-9">
        

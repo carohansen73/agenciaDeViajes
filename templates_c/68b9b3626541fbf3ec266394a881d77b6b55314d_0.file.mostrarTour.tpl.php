@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-10-02 22:03:32
+/* Smarty version 3.1.34-dev-7, created on 2020-10-03 21:46:06
   from 'C:\Users\Eq1-Sala\Desktop\xampp\htdocs\AgenciaDeViajes\templates\mostrarTour.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f7787949f76d5_18617947',
+  'unifunc' => 'content_5f78d4fe74c996_44803575',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '68b9b3626541fbf3ec266394a881d77b6b55314d' => 
     array (
       0 => 'C:\\Users\\Eq1-Sala\\Desktop\\xampp\\htdocs\\AgenciaDeViajes\\templates\\mostrarTour.tpl',
-      1 => 1601669008,
+      1 => 1601753940,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5f7787949f76d5_18617947 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f78d4fe74c996_44803575 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>  
 

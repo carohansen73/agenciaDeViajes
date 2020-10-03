@@ -2,7 +2,7 @@
 
 include_once 'app/controller/region.controller.php';
 include_once 'app/controller/tour.controller.php';
-include_once 'app/controller/administradorController.php';
+include_once 'app/controller/administrador.controller.php';
 
 
 // defino la base url para la construccion de links con urls semánticas
@@ -34,7 +34,7 @@ switch ($params[0]) {
             $controller =new TourController();
             $controller->mostrarTour($id);
     break;  
-    case 'insertar':
+    case 'insertarTour':
         $controller =new TourController();
         $controller->insertarTour();
     break;  
