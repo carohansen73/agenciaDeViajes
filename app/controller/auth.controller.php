@@ -29,9 +29,6 @@ class AuthController{
 
         header("location: " .BASE_URL);
 
-        function verificar(){
-
-            echo "aca se verifica";
-        }
+        
     }
 }
