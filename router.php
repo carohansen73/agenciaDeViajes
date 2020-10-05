@@ -52,6 +52,12 @@ switch ($params[0]) {
         $controller->eliminarRegion($id);
     break;  
     default:
+    case 'eliminarTour':
+        if (isset($params[1]))
+        $id=$params[1];
+        $controller =new TourController();
+        $controller->eliminarTour($id);
+    break;  
         echo('404 Page not found');
         break;
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-10-03 21:45:35
+/* Smarty version 3.1.34-dev-7, created on 2020-10-05 15:03:51
   from 'C:\Users\Eq1-Sala\Desktop\xampp\htdocs\AgenciaDeViajes\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f78d4dfe23959_00895515',
+  'unifunc' => 'content_5f7b19b7dcf744_61973247',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79d29c49625a2c13914e8c6dbe364330addb345f' => 
     array (
       0 => 'C:\\Users\\Eq1-Sala\\Desktop\\xampp\\htdocs\\AgenciaDeViajes\\templates\\header.tpl',
-      1 => 1601734851,
+      1 => 1601903029,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f78d4dfe23959_00895515 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f7b19b7dcf744_61973247 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,24 +46,7 @@ function content_5f78d4dfe23959_00895515 (Smarty_Internal_Template $_smarty_tpl)
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Norte</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cuyo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Patagonia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cordoba</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Buenos Aires</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Litoral</a>
-          </li>
+          
         </ul>
         <span class="navbar-text">
           <a class="nav-link"  href="">Iniciar Sesion</a>
