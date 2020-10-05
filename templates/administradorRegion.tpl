@@ -15,7 +15,6 @@
                 <th scope="row">{$region->id}</th>
                 <td>{$region->nombre}</td>
                 <td>{$region->informacion}</td>
-                <td>@mdo</td>
             </tr>
         {/foreach}    
         </tbody>

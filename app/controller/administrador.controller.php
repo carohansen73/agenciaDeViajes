@@ -21,7 +21,7 @@ class AdministradorController{
         $this->view-> mostrarTabla($regiones);
     }
     
-   /* function insertarRegion(){
+    function insertarRegion(){
         $nombre = $_POST['nombre'];
         $informacion = $_POST['informacion'];
 
@@ -31,5 +31,5 @@ class AdministradorController{
         }
 
         $id = $this->model->insertarRegion($nombre, $informacion);
-    }*/
+    }
 }

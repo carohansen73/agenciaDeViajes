@@ -20,7 +20,7 @@ class RegionController{
         $this->view-> mostrarRegiones($regiones);
     }
     
-    function insertarRegion(){
+   /* function insertarRegion(){
         $nombre = $_POST['nombre'];
         $informacion = $_POST['informacion'];
 
@@ -30,5 +30,5 @@ class RegionController{
         }
 
         $id = $this->model->insertarRegion($nombre, $informacion);
-    }
+    }*/
 }
