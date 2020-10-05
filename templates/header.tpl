@@ -22,24 +22,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Norte</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cuyo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Patagonia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cordoba</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Buenos Aires</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Litoral</a>
-          </li>
+          
         </ul>
         <span class="navbar-text">
           <a class="nav-link"  href="">Iniciar Sesion</a>

@@ -1,12 +1,27 @@
 
 {include 'header.tpl'}  
 
-{include 'form_tour.tpl'} 
+<table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Destino</th>
+                <th scope="col">Paquete</th>
+                <th scope="col">Itinerario</th>
+                <th scope="col">Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+        {foreach from=$tours item= $tour}
+            <tr>
+                <th scope="row">{$tour->destinos}</th>
+                <td>{$tour->paquete}</td>
+                <td>{$tour->itinerario}</td>
+                <td>{$tour->precio}</td>
+                <td><a class='btn btn-danger btn-sm' href='eliminar/{$tour->id}'>Eliminar</a></td>
+            </tr>
+        {/foreach}    
+        </tbody>
+    </table>
 
-    <ul class='list-group'>
-        {foreach from=$tours item=$tour}
-            <li class='list-group-item'>{$tour->destinos} | {$tour->paquete} |{$tour->itinerario}|{$tour->precio} </li>
-        {/foreach}
-    </ul>
-   
+   {include 'form_tour.tpl'} 
 {include 'footer.tpl'}
