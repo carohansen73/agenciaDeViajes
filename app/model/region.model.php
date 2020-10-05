@@ -35,6 +35,10 @@ class RegionModel{
         return $this->db->lastInsertId();
 
     }
+    function eliminarRegion($id){
+        $query = $this->db->prepare('DELETE FROM region WHERE id = ?');
+        $query->execute([$id]);
+    }
 
     
 };

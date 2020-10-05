@@ -38,13 +38,19 @@ switch ($params[0]) {
         $controller =new TourController();
         $controller->insertarTour();
     break;  
+    case 'administrador':
+        $controller = new AdministradorController();
+        $controller->mostrarTabla();
+    break;
     case 'InsertarRegion':
         $controller =new AdministradorController();
         $controller->insertarRegion();
     break;  
-    case 'administrador':
-        $controller = new AdministradorController();
-        $controller->mostrarTabla();
+    case 'eliminarRegion':
+        $controller =new AdministradorController();
+        $id=$params[1];
+        $controller->eliminarRegion($id);
+    break;  
     default:
         echo('404 Page not found');
         break;
