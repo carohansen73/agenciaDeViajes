@@ -2,6 +2,7 @@
 include_once 'app/view/admin.view.php';
 include_once 'app/model/region.model.php';
 
+
 class AdministradorController{
 
     private $model;
@@ -10,15 +11,18 @@ class AdministradorController{
     function __construct(){
 
         $this->model = new RegionModel();
-        //$this->view = new RegionView();
+      
         $this->view = new AdministradorView();
+
     }
+
+   
 
     function mostrarTabla(){
         
         $regiones = $this->model-> obtenerRegiones();
         
-        $this->view-> mostrarTabla($regiones);
+        $this->view-> mostrarTablaRegiones($regiones);
     }
     
     function insertarRegion(){
@@ -39,4 +43,6 @@ class AdministradorController{
         $this->model->eliminarRegion($id);
         header("Location: " . BASE_URL);
     }
+
+    
 }

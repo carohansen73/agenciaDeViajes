@@ -2,9 +2,9 @@
 
 require_once('libs/Smarty.class.php');
 
-class TourView{
+class AdminTourView{
 
-    function mostrarTours($tours){
+    function mostrarTablaTours($tours){
        
         $smarty=new smarty();
         
@@ -14,17 +14,15 @@ class TourView{
     
             
     }
-
-    function mostrarErrorTour($msg){/*muestro el error*/
-
-        $smarty=new smarty();
-       
-        $smarty->assign('msg', $msg);
-        
-        $smarty->display('templates/mostrarTour.tpl');
   
-    }
-   
-
+    function mostrarErrorTour($msg){/*muestro el error*/
+  
+      $smarty=new smarty();
+     
+      $smarty->assign('msg', $msg);
+      
+      $smarty->display('templates/mostrarTour.tpl');
+  
+  }
 
 }

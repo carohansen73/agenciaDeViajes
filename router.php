@@ -2,6 +2,7 @@
 
 include_once 'app/controller/region.controller.php';
 include_once 'app/controller/tour.controller.php';
+include_once 'app/controller/auth.controller.php';
 include_once 'app/controller/administrador.controller.php';
 
 
@@ -20,10 +21,10 @@ $params = explode('/', $action);
 
 // determina que camino seguir según la acción
 switch ($params[0]) {
-    /*case 'iniciar':
+    case 'iniciar':
         $controller= new AuthController();
-        $controller->iniciarSecion();
-    break;*/
+        $controller->mostrarLogin();
+    break;
     case 'home':
         $controller = new RegionController();
         $controller->mostrarRegion();

@@ -4,7 +4,7 @@ require_once('libs/Smarty.class.php');
 
 class AdministradorView{
 
-  function mostrarTabla($regiones){
+  function mostrarTablaRegiones($regiones){
 
         $smarty=new smarty();
 
@@ -12,7 +12,5 @@ class AdministradorView{
 
         $smarty->display('templates/administradorRegion.tpl');
     }
-
-  
 
 }

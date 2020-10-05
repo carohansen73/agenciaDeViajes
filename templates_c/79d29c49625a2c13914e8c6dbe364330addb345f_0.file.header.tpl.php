@@ -1,7 +1,31 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-10-05 23:09:34
+  from 'C:\Users\Eq1-Sala\Desktop\xampp\htdocs\AgenciaDeViajes\templates\header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5f7b8b8e909297_87260290',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '79d29c49625a2c13914e8c6dbe364330addb345f' => 
+    array (
+      0 => 'C:\\Users\\Eq1-Sala\\Desktop\\xampp\\htdocs\\AgenciaDeViajes\\templates\\header.tpl',
+      1 => 1601932161,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5f7b8b8e909297_87260290 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="{BASE_URL}">
+    <base href="<?php echo BASE_URL;?>
+">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rumbo Argentina</title>
@@ -31,4 +55,5 @@
     </nav> 
   </header>
 
-  <main class="container"> <!-- inicio del contenido pricipal -->
+  <main class="container"> <!-- inicio del contenido pricipal --><?php }
+}
