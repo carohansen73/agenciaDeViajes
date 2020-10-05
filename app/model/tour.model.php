@@ -9,7 +9,7 @@ class TourModel{
     }
 
     private function conectar(){
-        $db = new PDO('mysql:host=localhost;'.'dbname=db_tareas;charset=utf8', 'root', '');
+        $db = new PDO('mysql:host=localhost;'.'dbname=db_agenciaviajes;charset=utf8', 'root', '');
         return $db;
     }
 
@@ -24,14 +24,14 @@ class TourModel{
         return $tour;
     }
 
-    function insertarTour($destinos, $paquete,$itinerario,$precio){
+    function insertarTour($destinos, $paquete,$itinerario,$precio,$id_region){
 
     
-        $query=$this->db->prepare('INSERT INTO tour (destinos, paquete, itinerario, precio) VALUES(?,?,?,?)');
+        $query=$this->db->prepare('INSERT INTO tour (destinos, paquete, itinerario, precio, id_region) VALUES(?,?,?,?,?)');
         
-        $query->execute([$destinos, $paquete,$itinerario,$precio]);
+        $query->execute([$destinos, $paquete,$itinerario,$precio,$id_region]);
 
-        return $this->db->lastInsertId($destinos, $paquete,$itinerario,$precio);
+        return $this->db->lastInsertId();
     }   
     function borrarTour($id){
 
