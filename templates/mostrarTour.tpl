@@ -17,7 +17,7 @@
                 <td>{$tour->paquete}</td>
                 <td>{$tour->itinerario}</td>
                  <td>{$tour->precio}</td> 
-                <td><a class='btn btn-danger btn-sm' href='eliminar/{$tour->id}'>Eliminar</a></td>
+                <td><a class='btn btn-danger btn-sm' href='eliminarTour/{$tour->id}'>Eliminar</a></td>
             </tr>
         {/foreach}    
         </tbody>
