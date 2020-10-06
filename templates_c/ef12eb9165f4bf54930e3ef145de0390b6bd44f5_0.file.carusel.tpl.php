@@ -1,26 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.34-dev-7, created on 2020-10-05 21:16:32
-=======
-/* Smarty version 3.1.34-dev-7, created on 2020-10-03 16:11:58
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
-  from 'C:\xampp\htdocs\AgenciadeViajes\templates\carusel.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-10-02 19:47:55
+  from 'C:\Users\Eq1-Sala\Desktop\xampp\htdocs\AgenciaDeViajes\templates\carusel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-<<<<<<< HEAD
-  'unifunc' => 'content_5f7b7110359465_77190913',
-=======
-  'unifunc' => 'content_5f7886ae6f31f8_82123843',
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
+  'unifunc' => 'content_5f7767cbc3f364_18779939',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '30b1c7647716f1c226dc513adf49c841722f9e4c' => 
+    'ef12eb9165f4bf54930e3ef145de0390b6bd44f5' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\AgenciadeViajes\\templates\\carusel.tpl',
-      1 => 1601648505,
+      0 => 'C:\\Users\\Eq1-Sala\\Desktop\\xampp\\htdocs\\AgenciaDeViajes\\templates\\carusel.tpl',
+      1 => 1601593303,
       2 => 'file',
     ),
   ),
@@ -28,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5f7b7110359465_77190913 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5f7886ae6f31f8_82123843 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
+function content_5f7767cbc3f364_18779939 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h1>Elegi tu RUMBO</h1>
   <section class="centrar">
     <div class="centrar">

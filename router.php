@@ -2,8 +2,9 @@
 
 include_once 'app/controller/region.controller.php';
 include_once 'app/controller/tour.controller.php';
-include_once 'app/controller/administrador.controller.php';
-
+include_once 'app/controller/auth.controller.php';
+include_once 'app/controller/adminRegion.controller.php';
+include_once 'app/controller/adminTour.controller.php';
 
 // defino la base url para la construccion de links con urls semánticas
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -20,10 +21,10 @@ $params = explode('/', $action);
 
 // determina que camino seguir según la acción
 switch ($params[0]) {
-    /*case 'iniciar':
+    case 'iniciar':
         $controller= new AuthController();
-        $controller->iniciarSecion();
-    break;*/
+        $controller->mostrarLogin();
+    break;
     case 'home':
         $controller = new RegionController();
         $controller->mostrarRegion();
@@ -35,27 +36,26 @@ switch ($params[0]) {
             $controller->mostrarTour($id);}
     break;  
     case 'insertarTour':
-        $controller =new TourController();
+        $controller =new AdminTourController();
         $controller->insertarTour();
     break;  
     case 'administrador':
-        $controller = new AdministradorController();
+        $controller = new AdminRegionController();
         $controller->mostrarTabla();
     break;
     case 'InsertarRegion':
-        $controller =new AdministradorController();
+        $controller =new AdminRegionController();
         $controller->insertarRegion();
     break;  
     case 'eliminarRegion':
-        if (isset($params[1])){
-        $controller =new AdministradorController();
+        $controller =new AdminRegionController();
         $id=$params[1];
         $controller->eliminarRegion($id);}
     break;  
     case 'eliminarTour':
         if (isset($params[1]))
         $id=$params[1];
-        $controller =new TourController();
+        $controller =new AdminTourController();
         $controller->eliminarTour($id);
     break;  
     default:

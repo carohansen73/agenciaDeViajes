@@ -15,18 +15,4 @@ class TourView{
             
     }
 
-    function mostrarErrorTour($msg){/*muestro el error*/
-
-        $smarty=new smarty();
-       
-        $smarty->assign('msg', $msg);
-        
-        $smarty->display('templates/mostrarTour.tpl');
-  
-    }
-    function insetarCambios(){
-        echo "hola";
-    }
-
-
 }

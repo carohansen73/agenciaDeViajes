@@ -7,7 +7,7 @@
                 <th scope="col">Destino</th>
                 <th scope="col">Paquete</th>
                 <th scope="col">Itinerario</th>
-                <th scope="col">Precio</th>
+                <th scope="col">Precio</th> 
             </tr>
         </thead>
         <tbody>
@@ -16,7 +16,7 @@
                 <th scope="row">{$tour->destinos}</th>
                 <td>{$tour->paquete}</td>
                 <td>{$tour->itinerario}</td>
-                <td>{$tour->precio}</td>
+                 <td>{$tour->precio}</td> 
                 <td><a class='btn btn-danger btn-sm' href='eliminar/{$tour->id}'>Eliminar</a></td>
             </tr>
         {/foreach}    

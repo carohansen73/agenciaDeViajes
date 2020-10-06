@@ -1,11 +1,19 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 3.1.34-dev-7, created on 2020-10-05 21:16:45
+=======
+/* Smarty version 3.1.34-dev-7, created on 2020-10-05 15:02:12
+>>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
   from 'C:\xampp\htdocs\AgenciadeViajes\templates\form_tour.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
+<<<<<<< HEAD
   'unifunc' => 'content_5f7b711dece096_26819184',
+=======
+  'unifunc' => 'content_5f7b19549d5bf9_28821214',
+>>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +28,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_5f7b711dece096_26819184 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_5f7b19549d5bf9_28821214 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
 ?><!-- formulario de alta de tour -->
 <form action="insertarTour" method="POST" class="my-4">
     <div class="row">

@@ -1,26 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.34-dev-7, created on 2020-10-05 21:17:02
-=======
-/* Smarty version 3.1.34-dev-7, created on 2020-10-03 21:27:41
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
-  from 'C:\xampp\htdocs\AgenciadeViajes\templates\form_region.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-10-03 21:48:32
+  from 'C:\Users\Eq1-Sala\Desktop\xampp\htdocs\AgenciaDeViajes\templates\form_region.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-<<<<<<< HEAD
-  'unifunc' => 'content_5f7b712e10a490_50229507',
-=======
-  'unifunc' => 'content_5f78d0ad49c4c7_50991524',
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
+  'unifunc' => 'content_5f78d590f29cd0_16614527',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '30cf6deb7106dec9859bfe19cc5181cc7bb08034' => 
+    'ca3ee1ea3cc3a207a4e10dd8ee7877d095a76158' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\AgenciadeViajes\\templates\\form_region.tpl',
-      1 => 1601753133,
+      0 => 'C:\\Users\\Eq1-Sala\\Desktop\\xampp\\htdocs\\AgenciaDeViajes\\templates\\form_region.tpl',
+      1 => 1601754454,
       2 => 'file',
     ),
   ),
@@ -28,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5f7b712e10a490_50229507 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5f78d0ad49c4c7_50991524 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
+function content_5f78d590f29cd0_16614527 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form action="InsertarRegion" method="POST" class="my-4">
     <div class="row">
         <div class="col-9">

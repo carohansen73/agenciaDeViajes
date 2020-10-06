@@ -1,26 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.34-dev-7, created on 2020-10-05 21:16:31
-=======
-/* Smarty version 3.1.34-dev-7, created on 2020-10-03 21:16:27
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
-  from 'C:\xampp\htdocs\AgenciadeViajes\templates\mostrarRegion.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-10-03 01:45:19
+  from 'C:\xampp\htdocs\AgenciaViajes2\templates\mostrarRegion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-<<<<<<< HEAD
-  'unifunc' => 'content_5f7b710f0e0340_51896944',
-=======
-  'unifunc' => 'content_5f78ce0b6ad6e9_48292771',
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
+  'unifunc' => 'content_5f77bb8fcbbc41_31856256',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '883b4fbe9ddb03960e9ce478845b3152af11da1e' => 
+    '54826e42a1d61c8af6e09904910d832075717a35' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\AgenciadeViajes\\templates\\mostrarRegion.tpl',
-      1 => 1601750676,
+      0 => 'C:\\xampp\\htdocs\\AgenciaViajes2\\templates\\mostrarRegion.tpl',
+      1 => 1601682313,
       2 => 'file',
     ),
   ),
@@ -31,15 +23,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5f7b710f0e0340_51896944 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5f78ce0b6ad6e9_48292771 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
+function content_5f77bb8fcbbc41_31856256 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
 <?php $_smarty_tpl->_subTemplateRender('file:carusel.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?> 
+   
        
         <div class='container-fluid'>
         <div class='row'>
@@ -58,8 +47,7 @@ $_smarty_tpl->tpl_vars['region']->do_else = false;
 </h5>
                         <p class='card-text'> <?php echo $_smarty_tpl->tpl_vars['region']->value->informacion;?>
 </p>
-                        <a href='region/<?php echo $_smarty_tpl->tpl_vars['region']->value->id;?>
-' class='btn btn-info'>Ver detalle</a>
+                        <a href='region/$region->id' class='btn btn-info'>Ver detalle</a>
                     </div>
                 </div>
             </div>

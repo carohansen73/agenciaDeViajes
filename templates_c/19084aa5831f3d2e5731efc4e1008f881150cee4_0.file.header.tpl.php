@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 3.1.34-dev-7, created on 2020-10-05 21:16:32
-=======
-/* Smarty version 3.1.34-dev-7, created on 2020-10-03 16:11:58
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
-  from 'C:\xampp\htdocs\AgenciadeViajes\templates\header.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-10-03 01:45:19
+  from 'C:\xampp\htdocs\AgenciaViajes2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-<<<<<<< HEAD
-  'unifunc' => 'content_5f7b71101a7a87_90454122',
-=======
-  'unifunc' => 'content_5f7886ae656dd5_29410150',
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
+  'unifunc' => 'content_5f77bb8fe03e90_75997525',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '93b01a873831739ae4bda2ee74e5a2498fc8fb62' => 
+    '19084aa5831f3d2e5731efc4e1008f881150cee4' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\AgenciadeViajes\\templates\\header.tpl',
-<<<<<<< HEAD
-      1 => 1601905530,
-=======
+      0 => 'C:\\xampp\\htdocs\\AgenciaViajes2\\templates\\header.tpl',
       1 => 1601682294,
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
       2 => 'file',
     ),
   ),
@@ -32,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_5f7b71101a7a87_90454122 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_5f7886ae656dd5_29410150 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
+function content_5f77bb8fe03e90_75997525 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,9 +46,6 @@ function content_5f7886ae656dd5_29410150 (Smarty_Internal_Template $_smarty_tpl)
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-<<<<<<< HEAD
-          
-=======
           <li class="nav-item">
             <a class="nav-link" href="#">Norte</a>
           </li>
@@ -83,7 +64,6 @@ function content_5f7886ae656dd5_29410150 (Smarty_Internal_Template $_smarty_tpl)
           <li class="nav-item">
             <a class="nav-link" href="#">Litoral</a>
           </li>
->>>>>>> 07d5439f71c822388349a9154647fd8cad4e5332
         </ul>
         <span class="navbar-text">
           <a class="nav-link"  href="">Iniciar Sesion</a>

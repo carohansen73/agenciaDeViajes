@@ -1,5 +1,6 @@
-
 <?php
+
+include_once 'app/view/auth.view.php';
 
 class AuthController{
 
@@ -10,7 +11,7 @@ class AuthController{
         $this->view = new AuthView();
     }
 
-    function mostrarLogin($id){
+    function mostrarLogin(){
         
         $this->view-> mostrarFormLogin();
     }
@@ -27,8 +28,6 @@ class AuthController{
         }
         
 
-        header("location: " .BASE_URL);
-
-        
+        //header("location: " .BASE_URL); 
     }
 }
