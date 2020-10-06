@@ -1,7 +1,7 @@
 {include 'header.tpl'}  
 
     <div class="mt-5 w-25 mx-auto">
-        <form action="iniciar" method="POST">
+        <form action="verify" method="POST">
 
             <div class="form-group">
                 <label for="email"> Email </label>

@@ -7,12 +7,10 @@ class AuthController{
     private $view;
 
     function __construct(){
-       
         $this->view = new AuthView();
     }
 
     function mostrarLogin(){
-        
         $this->view-> mostrarFormLogin();
     }
 
@@ -21,12 +19,10 @@ class AuthController{
         $email=$_POST['email'];
         $contraseña=$_POST['password'];
 
-
         if( empty ($email) || empty ($contraseña)){
             $this->view->mostrarError('Faltan datos obligatorios');
             die();
         }
-        
 
         //header("location: " .BASE_URL); 
     }
