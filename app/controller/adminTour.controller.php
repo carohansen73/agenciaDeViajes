@@ -40,3 +40,4 @@ function eliminarTour($id){
     $this->model->borrarTour($id);
     header("location: " .BASE_URL);
  }
+}
