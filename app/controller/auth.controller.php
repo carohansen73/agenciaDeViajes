@@ -19,12 +19,12 @@ class AuthController{
     function iniciarSesion(){
 
         $email=$_POST['email'];
-        $contraseña=$_POST['contraseña'];
+        $contraseña=$_POST['password'];
 
 
         if( empty ($email) || empty ($contraseña)){
-        $this->view->mostrarError('Faltan datos obligatorios');
-        die();
+            $this->view->mostrarError('Faltan datos obligatorios');
+            die();
         }
         
 

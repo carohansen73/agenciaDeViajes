@@ -50,7 +50,7 @@ switch ($params[0]) {
     case 'eliminarRegion':
         $controller =new AdminRegionController();
         $id=$params[1];
-        $controller->eliminarRegion($id);}
+        $controller->eliminarRegion($id);
     break;  
     case 'eliminarTour':
         if (isset($params[1]))

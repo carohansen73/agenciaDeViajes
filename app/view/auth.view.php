@@ -1,4 +1,5 @@
 <?php
+include_once('libs/Smarty.class.php');
 
 class AuthView{
 
@@ -13,8 +14,7 @@ class AuthView{
   
         echo "<h1>Error</h1>";
         echo "<h2> $msg</h2>";
- 
-     }
+    }
 
 
 }
