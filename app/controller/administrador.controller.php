@@ -32,11 +32,11 @@ class AdministradorController{
 
         $id = $this->model->insertarRegion($nombre, $informacion);
          // redirigimos al  la tabla
-         header("Location: " . BASE_URL); 
+         header("Location: " . BASE_URL . "administrador"); 
     }
     
     function eliminarRegion($id){
         $this->model->eliminarRegion($id);
-        header("Location: " . BASE_URL);
+        header("Location: " . BASE_URL . "administrador");
     }
 }

@@ -29,10 +29,10 @@ switch ($params[0]) {
         $controller->mostrarRegion();
     break;
     case 'region':
-        if (isset($params[1]))
+        if (isset($params[1])){
             $id=$params[1];
             $controller =new TourController();
-            $controller->mostrarTour($id);
+            $controller->mostrarTour($id);}
     break;  
     case 'insertarTour':
         $controller =new TourController();
@@ -47,17 +47,18 @@ switch ($params[0]) {
         $controller->insertarRegion();
     break;  
     case 'eliminarRegion':
+        if (isset($params[1])){
         $controller =new AdministradorController();
         $id=$params[1];
-        $controller->eliminarRegion($id);
+        $controller->eliminarRegion($id);}
     break;  
-    default:
     case 'eliminarTour':
         if (isset($params[1]))
         $id=$params[1];
         $controller =new TourController();
         $controller->eliminarTour($id);
     break;  
+    default:
         echo('404 Page not found');
         break;
 }
