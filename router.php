@@ -27,6 +27,7 @@ switch ($params[0]) {
     break;
     case 'verify':
         $controller= new AuthController();
+        $controller->iniciarSesion();
     break;
     case 'home':
         $controller = new RegionController();

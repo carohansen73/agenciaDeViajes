@@ -13,4 +13,10 @@ class usuarioModel{
         return $db;
     }
 
+    /*Devuelve el usuario*/
+    function obtenerEmail($email){
+        $query = $this->db->prepare('SELECT * FROM usuarios WHERE email = (?)');
+        $query->execute([$email]);
+        return $query->fetch(PDO::FETCH_OBJ);
+    }
 }
