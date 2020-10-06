@@ -16,28 +16,26 @@ class AdminTourController{
 
     }
 
+    function insertarTour(){
+        
+        $destinos=$_POST['destinos'];
+        $paquete=$_POST['paquete'];
+        $itinerario=$_POST['itinerario'];
+        $precio=$_POST['precio'];
+        $id_region=$_POST['id_region'];
 
+        if( empty ($destinos) || empty ($paquete)|| empty ($itinerario)|| empty ($precio)|| empty ($id_region)){
+            $this->view->mostrarErrorTour('Faltan datos obligatorios');
+            die();
+        }
+        $id=$this->model->insertarTour($destinos, $paquete,$itinerario,$precio,$id_region);
 
-function insertarTour(){
-    
-    $destinos=$_POST['destinos'];
-    $paquete=$_POST['paquete'];
-    $itinerario=$_POST['itinerario'];
-    $precio=$_POST['precio'];
-    $id_region=$_POST['id_region'];
+        /*header("location: " .BASE_URL);*/
+    }
 
-if( empty ($destinos) || empty ($paquete)|| empty ($itinerario)|| empty ($precio)|| empty ($id_region)){
-$this->view->mostrarErrorTour('Faltan datos obligatorios');
-die();
-}
-$id=$this->model->insertarTour($destinos, $paquete,$itinerario,$precio,$id_region);
+    function eliminarTour($id){
 
-/*header("location: " .BASE_URL);*/
-}
-
-function eliminarTour($id){
-
-    $this->model->borrarTour($id);
-    header("location: " .BASE_URL);
- }
+        $this->model->borrarTour($id);
+        header("location: " .BASE_URL);
+    }
 }

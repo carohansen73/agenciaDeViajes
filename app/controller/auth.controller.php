@@ -28,8 +28,6 @@ class AuthController{
         }
         
 
-        //header("location: " .BASE_URL);
-
-        
+        //header("location: " .BASE_URL); 
     }
 }

@@ -40,15 +40,15 @@ switch ($params[0]) {
         $controller->insertarTour();
     break;  
     case 'administrador':
-        $controller = new AdministradorController();
+        $controller = new AdminRegionController();
         $controller->mostrarTabla();
     break;
     case 'InsertarRegion':
-        $controller =new AdministradorController();
+        $controller =new AdminRegionController();
         $controller->insertarRegion();
     break;  
     case 'eliminarRegion':
-        $controller =new AdministradorController();
+        $controller =new AdminRegionController();
         $id=$params[1];
         $controller->eliminarRegion($id);
     break;  

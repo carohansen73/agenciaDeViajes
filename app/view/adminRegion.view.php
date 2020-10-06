@@ -2,7 +2,7 @@
 
 require_once('libs/Smarty.class.php');
 
-class AdministradorView{
+class AdminRegionView{
 
   function mostrarTablaRegiones($regiones){
 
