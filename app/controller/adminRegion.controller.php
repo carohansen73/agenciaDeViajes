@@ -1,5 +1,5 @@
 <?php
-include_once 'app/view/admin.view.php';
+include_once 'app/view/adminRegion.view.php';
 include_once 'app/model/region.model.php';
 
 
