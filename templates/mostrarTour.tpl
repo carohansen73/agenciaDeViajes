@@ -1,6 +1,6 @@
 
 {include 'header.tpl'}  
-
+{include 'form_tour.tpl'} 
 <table class="table">
         <thead class="thead-light">
             <tr>
@@ -23,5 +23,5 @@
         </tbody>
     </table>
 
-   {include 'form_tour.tpl'} 
+   
 {include 'footer.tpl'}
