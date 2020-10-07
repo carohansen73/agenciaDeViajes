@@ -30,13 +30,14 @@ class AuthController{
         /*Obtengo el usuario*/
         $usuario = $this->model->obtenerEmail($email);
 
-        if($usuario && $usuario->password == $contraseña) {
+        if($usuario && password_verify($contraseña, $usuario->password)) {
             echo 'acceso exitoso';
         } else {
             echo 'denegado';
         };
 
         //var_dump($usuario);
+
 
 
         //header("location: " .BASE_URL); 
