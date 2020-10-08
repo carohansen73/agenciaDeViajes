@@ -6,6 +6,19 @@ class AdminTourView{
 
   function mostrarTablaTours($tours){
       
+    function mostrarTablaTours($tours){
+     
+        $smarty=new smarty();
+        
+        $smarty->assign('tours', $tours);
+        
+        $smarty->display('templates/adminTour.tpl');
+    
+            
+    }
+  
+    function mostrarErrorTour($msg){/*muestro el error*/
+  
       $smarty=new smarty();
       
       $smarty->assign('tours', $tours);
