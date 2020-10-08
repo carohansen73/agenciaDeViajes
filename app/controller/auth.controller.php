@@ -31,7 +31,8 @@ class AuthController{
         $usuario = $this->model->obtenerEmail($email);
 
         if($usuario && password_verify($contraseña, $usuario->password)) {
-            echo 'acceso exitoso';
+            echo 'bien';
+
         } else {
             echo 'denegado';
         };

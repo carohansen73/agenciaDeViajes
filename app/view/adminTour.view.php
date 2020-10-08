@@ -10,7 +10,7 @@ class AdminTourView{
         
         $smarty->assign('tours', $tours);
         
-        $smarty->display('templates/mostrarTour.tpl');
+        $smarty->display('templates/administradorRegion.tpl');
     
             
     }

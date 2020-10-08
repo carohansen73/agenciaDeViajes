@@ -16,6 +16,13 @@ class AdminTourController{
 
     }
 
+    function mostrarTabla(){
+        
+        $tours = $this->model-> obtenerTours();
+        
+        $this->view-> mostrarTablaTours($tours);
+    }
+
     function insertarTour(){
         
         $destinos=$_POST['destinos'];
@@ -30,12 +37,14 @@ class AdminTourController{
         }
         $id=$this->model->insertarTour($destinos, $paquete,$itinerario,$precio,$id_region);
 
-        /*header("location: " .BASE_URL);*/
+        /*header("location: " . BASE_URL . "region");*/
     }
 
     function eliminarTour($id){
 
         $this->model->borrarTour($id);
-        header("location: " .BASE_URL);
+        /*header("location: " . BASE_URL . "region");*/
     }
+
+   
 }

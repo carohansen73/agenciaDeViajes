@@ -13,7 +13,18 @@ class TourModel{
         return $db;
     }
 
-    function obtenerTour($id_region){
+    function obtenerTours(){
+
+      
+        $query=$this->db->prepare('SELECT * FROM tour');
+        $query->execute();
+
+        $tour=$query->fetchAll(PDO::FETCH_OBJ);
+
+        return $tour;
+    }
+
+    function obtenerTour($id_region=null){
 
       
         $query=$this->db->prepare('SELECT * FROM tour WHERE id_region = ?');

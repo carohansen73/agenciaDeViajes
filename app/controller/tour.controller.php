@@ -16,6 +16,8 @@ class TourController{
         $tour = $this->model-> obtenerTour($id);
        
         $this->view-> mostrarTours($tour);
+
+        
     }
-    
+     
 }
