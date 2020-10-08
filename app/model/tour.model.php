@@ -19,9 +19,9 @@ class TourModel{
         $query=$this->db->prepare('SELECT * FROM tour');
         $query->execute();
 
-        $tour=$query->fetchAll(PDO::FETCH_OBJ);
+        $tours=$query->fetchAll(PDO::FETCH_OBJ);
 
-        return $tour;
+        return $tours;
     }
 
     function obtenerTour($id_region=null){

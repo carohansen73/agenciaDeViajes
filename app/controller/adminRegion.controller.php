@@ -11,7 +11,6 @@ class AdminRegionController{
     function __construct(){
 
         $this->model = new RegionModel();
-      
         $this->view = new AdminRegionView();
 
     }
@@ -19,7 +18,6 @@ class AdminRegionController{
     function mostrarTabla(){
         
         $regiones = $this->model-> obtenerRegiones();
-        
         $this->view-> mostrarTablaRegiones($regiones);
     }
     

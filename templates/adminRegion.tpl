@@ -47,4 +47,3 @@
     
 {include 'footer.tpl'}
    
-{include 'footer.tpl'}
