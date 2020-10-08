@@ -10,7 +10,7 @@ class AdminRegionView{
 
         $smarty->assign('regiones', $regiones);
 
-        $smarty->display('templates/administradorRegion.tpl');
+        $smarty->display('templates/administrador.tpl');
     }
 
 }
