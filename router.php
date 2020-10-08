@@ -47,6 +47,10 @@ switch ($params[0]) {
         $controller = new AdminRegionController();
         $controller->mostrarTabla();
     break;
+    case 'adminTour':
+        $controller = new AdminTourController();
+        $controller->mostrarTabla();
+    break;
     case 'InsertarRegion':
         $controller =new AdminRegionController();
         $controller->insertarRegion();

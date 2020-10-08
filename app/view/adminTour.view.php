@@ -5,12 +5,12 @@ require_once('libs/Smarty.class.php');
 class AdminTourView{
 
     function mostrarTablaTours($tours){
-       
+     
         $smarty=new smarty();
         
         $smarty->assign('tours', $tours);
         
-        $smarty->display('templates/administrador.tpl');
+        $smarty->display('templates/adminTour.tpl');
     
             
     }

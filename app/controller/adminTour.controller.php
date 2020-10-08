@@ -20,7 +20,7 @@ class AdminTourController{
         
         $tours = $this->model-> obtenerTours();
         
-        $this->view-> mostrarTablaTours($tours);
+        $this->view->mostrarTablaTours($tours);
     }
 
     function insertarTour(){
