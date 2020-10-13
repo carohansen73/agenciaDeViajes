@@ -39,6 +39,18 @@ class AdminRegionController{
         $this->model->eliminarRegion($id);
         header("Location: " . BASE_URL . "administrador");
     }
+    function actualizarRegion ($id){
+        $nombre = $_POST['nombre'];
+        $informacion = $_POST['informacion'];
+
+        if(empty($nombre) || empty($informacion)){
+            echo "<h2>ERROR , Faltan datos </h2>";
+            die();
+        }
+
+        $this->model->actualizarRegion($id, $nombre, $informacion);
+        header("Location: " . BASE_URL . "administrador"); 
+    }
 
     
 }

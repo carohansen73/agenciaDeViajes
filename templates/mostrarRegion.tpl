@@ -1,5 +1,5 @@
 {include 'header.tpl'} 
-{include 'carusel.tpl'} 
+{include 'carrusel.tpl'} 
        
         <div class='container-fluid'>
         <div class='row'>
