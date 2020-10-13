@@ -39,6 +39,7 @@ class AdminRegionController{
         $this->model->eliminarRegion($id);
         header("Location: " . BASE_URL . "administrador");
     }
+    
     function actualizarRegion ($id){
         $nombre = $_POST['nombre'];
         $informacion = $_POST['informacion'];
