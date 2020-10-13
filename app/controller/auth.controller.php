@@ -3,6 +3,7 @@
 include_once 'app/view/auth.view.php';
 include_once 'app/model/usuario.model.php';
 
+
 class AuthController{
 
     private $view;
@@ -31,8 +32,11 @@ class AuthController{
         $usuario = $this->model->obtenerEmail($email);
 
         if($usuario && password_verify($contraseña, $usuario->password)) {
-            echo 'bien';
+            session_start();
+            $_SESSION['ID_USUARIO'] = $usuario->id;
+            $_SESSION['EMAIL_USUARIO'] = $usuario->email;
 
+            header("Location: " . BASE_URL . "administrador");
         } else {
             echo 'denegado';
         };
