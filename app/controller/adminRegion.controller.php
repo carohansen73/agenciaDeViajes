@@ -47,17 +47,26 @@ class AdminRegionController{
     }
 
     function actualizarRegion ($id){
+       
+       
+        $region=$this->model->obtenerRegion($id);
+        
+        $this->view-> mostrarRegion($region);
+    }
+    function actualizar (){
         $nombre = $_POST['nombre'];
         $informacion = $_POST['informacion'];
+        $id = $_POST['id'];
 
         if(empty($nombre) || empty($informacion)){
             echo "<h2>ERROR , Faltan datos </h2>";
             die();
         }
-
-        $this->model->actualizarRegion($id, $nombre, $informacion);
-        header("Location: " . BASE_URL . "administrador"); 
+       /*var_dump($nombre, $informacion, $id);
+        die();*/
+        //necesito id para actualizar esa fila en particular//
+        $this->model->actualizarRegion($nombre, $informacion, $id);
+        header("Location: " . BASE_URL . "administrador");
     }
-
     
 }

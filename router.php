@@ -65,6 +65,9 @@ switch ($params[0]) {
         $id=$params[1];
         $controller->actualizarRegion($id);
     break;  
+    case 'ActulizarRegion':
+        $controller =new AdminRegionController();
+        $controller->actualizar();
     case 'eliminarTour':
         if (isset($params[1]))
         $id=$params[1];

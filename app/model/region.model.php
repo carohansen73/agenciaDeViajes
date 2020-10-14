@@ -39,12 +39,24 @@ class RegionModel{
         $query = $this->db->prepare('DELETE FROM region WHERE id = ?');
         $query->execute([$id]);
     }
-    function actualizarRegion($id, $nombre, $informacion){
+    function actualizarRegion( $nombre, $informacion, $id){
         $query = $this->db->prepare('UPDATE region SET nombre = ?, informacion = ? WHERE id = ?');
         $query->execute([$nombre, $informacion, $id]);
-        var_dump($query);
+        
         die();
     }
+
+    function obtenerRegion($id){
+        //2-Enviar la consulta (preparar y ejecutar)
+         $query = $this->db->prepare('SELECT * FROM region WHERE id=?');
+         $query->execute([$id]);
+ 
+         //3-procesar la respuesta para generar html
+         $region = $query->fetch(PDO::FETCH_OBJ);
+         //4- cerrar la conexion (PDO lo hace solo)
+         return $region;
+      
+     }
 
     
 };
