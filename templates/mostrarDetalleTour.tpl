@@ -8,6 +8,6 @@
 
         <button type="submit" class="btn btn-primary">Comprar</button>
 
-       <a href="{BASE_URL}home">Volver</a>
+       <a href="{BASE_URL}">Volver</a>
 
 {include 'footer.tpl'}

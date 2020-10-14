@@ -11,4 +11,10 @@ class AuthHelper {
             header("Location: " . BASE_URL . "iniciar");
         }
     }
+
+    function cerrarSeccion() {
+        session_start();
+        session_destroy();
+        header("Location: " . BASE_URL . 'login');
+    } 
 }    

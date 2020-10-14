@@ -29,6 +29,10 @@ switch ($params[0]) {
         $controller= new AuthController();
         $controller->iniciarSesion();
     break;
+    case 'cerrar':
+        $controller = new AuthController();
+        $controller->cerrarSeccion();
+        break;    
     case 'home':
         $controller = new RegionController();
         $controller->mostrarRegion();
@@ -74,6 +78,16 @@ switch ($params[0]) {
     case 'ActulizarRegion':
         $controller =new AdminRegionController();
         $controller->actualizar();
+    break;  
+    case 'actualizarTour':
+        $controller =new AdminTourController();
+        $id=$params[1];
+        $controller->actualizarTour($id);
+    break;  
+    case 'ActualizarTour':
+        $controller =new AdminTourController();
+        $controller->actualizar();
+    break;     
     case 'eliminarTour':
         if (isset($params[1]))
         $id=$params[1];

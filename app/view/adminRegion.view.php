@@ -14,15 +14,18 @@ class AdminRegionView{
   }
 
   function mostrarRegion($region){
+    
     $smarty=new smarty();
 
     $smarty->assign('region', $region);
 
     $smarty->display('templates/actualizarRegion.tpl');
 
-    $smarty->assign('region', $region);
+    /*$smarty->assign('region', $region);*/
 
-    $smarty->display('templates/form_actualizarRegion.tpl');
+    /*$smarty->display('templates/form_actualizarRegion.tpl');*/
 
   }
+
+
 }

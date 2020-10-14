@@ -60,4 +60,12 @@ class TourModel{
         $query->execute([$id]);
     
     }
+
+    function actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$id){
+
+        $query = $this->db->prepare('UPDATE tour SET destinos=?, paquete = ?, itinerario = ?, precio = ?, id_region = ? WHERE id=? ');
+        
+        $query->execute([$destinos, $paquete,$itinerario,$precio,$id_region,$id]);
+        
+    }
 }

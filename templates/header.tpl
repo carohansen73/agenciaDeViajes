@@ -24,7 +24,7 @@
           </li>
           {if isset($smarty.session.EMAIL_USUARIO)}
             <li class="nav-item ml-auto">
-                <a class="nav-link"  href="iniciar">{$smarty.session.EMAIL_USUARIO}</a>
+                <a class="nav-link"  href="cerrar">{$smarty.session.EMAIL_USUARIO}(Cerrar Session)</a>
             </li> 
           {else} 
             <li class="nav-item ml-auto">

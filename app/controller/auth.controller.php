@@ -2,16 +2,19 @@
 
 include_once 'app/view/auth.view.php';
 include_once 'app/model/usuario.model.php';
+include_once 'app/helpers/auth.helper.php';
 
 
 class AuthController{
 
     private $view;
     private $model;
+    private $authHelper;
 
     function __construct(){
         $this->view = new AuthView();
         $this->model = new usuarioModel();
+        $this->authHelper = new AuthHelper();
     }
 
     function mostrarLogin(){
@@ -41,10 +44,13 @@ class AuthController{
             echo 'denegado';
         };
 
-        //var_dump($usuario);
-
-
-
-        //header("location: " .BASE_URL); 
     }
+
+     function cerrarSeccion(){
+
+        $this->authHelper->cerrarSeccion();
+
+        header("location: " .BASE_URL . "iniciar"); 
+        
+     }
 }

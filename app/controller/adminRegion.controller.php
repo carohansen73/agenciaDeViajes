@@ -48,11 +48,11 @@ class AdminRegionController{
 
     function actualizarRegion ($id){
        
-       
         $region=$this->model->obtenerRegion($id);
         
         $this->view-> mostrarRegion($region);
     }
+
     function actualizar (){
         $nombre = $_POST['nombre'];
         $informacion = $_POST['informacion'];
@@ -66,6 +66,7 @@ class AdminRegionController{
         die();*/
         //necesito id para actualizar esa fila en particular//
         $this->model->actualizarRegion($nombre, $informacion, $id);
+        
         header("Location: " . BASE_URL . "administrador");
     }
     
