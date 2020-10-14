@@ -18,15 +18,23 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav  d-flex w-100">
           <li class="nav-item active">
             <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
           </li>
-          
+          {if isset($smarty.session.EMAIL_USUARIO)}
+            <li class="nav-item ml-auto">
+                <a class="nav-link"  href="iniciar">{$smarty.session.EMAIL_USUARIO}</a>
+            </li> 
+          {else} 
+            <li class="nav-item ml-auto">
+              <a class="nav-link"  href="iniciar">Iniciar Sesion</a>
+            </li>  
+          {/if}
         </ul>
-        <span class="navbar-text">
+         <!--<span class="navbar-text">
           <a class="nav-link"  href="iniciar">Iniciar Sesion</a>
-        </span>
+        </span>-->
       </div>
     </nav> 
   </header>

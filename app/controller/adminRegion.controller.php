@@ -1,18 +1,24 @@
 <?php
 include_once 'app/view/adminRegion.view.php';
 include_once 'app/model/region.model.php';
+include_once 'app/helpers/auth.helper.php';
 
 
 class AdminRegionController{
 
     private $model;
     private $view;
+    private $authHelper;
 
     function __construct(){
 
         $this->model = new RegionModel();
         $this->view = new AdminRegionView();
 
+        $this->authHelper = new AuthHelper();
+
+        // verifico que el usuario esté logueado siempre
+        $this->authHelper->chequearLogin();
     }
 
     function mostrarTabla(){
@@ -40,5 +46,27 @@ class AdminRegionController{
         header("Location: " . BASE_URL . "administrador");
     }
 
+    function actualizarRegion ($id){
+       
+       
+        $region=$this->model->obtenerRegion($id);
+        
+        $this->view-> mostrarRegion($region);
+    }
+    function actualizar (){
+        $nombre = $_POST['nombre'];
+        $informacion = $_POST['informacion'];
+        $id = $_POST['id'];
+
+        if(empty($nombre) || empty($informacion)){
+            echo "<h2>ERROR , Faltan datos </h2>";
+            die();
+        }
+       /*var_dump($nombre, $informacion, $id);
+        die();*/
+        //necesito id para actualizar esa fila en particular//
+        $this->model->actualizarRegion($nombre, $informacion, $id);
+        header("Location: " . BASE_URL . "administrador");
+    }
     
 }

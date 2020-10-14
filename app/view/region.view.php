@@ -11,8 +11,9 @@ class RegionView{
         $smarty->assign('regiones', $regiones);
 
         $smarty->display('templates/mostrarRegion.tpl');
-    }
+  }
 
+  
   
 
 }
