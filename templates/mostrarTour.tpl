@@ -11,7 +11,7 @@
                         <div class='card-body'>
                             <h5 class='card-title'>{$tour->destinos }</h5>
                             <p class='card-text'> {$tour->precio}</p>
-                    
+                            <a class='btn btn-danger btn-sm' href='verDetalle/{$tour->id}'>Ver</a>
                         </div>
                     </div>
                 </div>

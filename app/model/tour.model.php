@@ -35,6 +35,16 @@ class TourModel{
         return $tour;
     }
 
+    function detalleTour($id){
+        $query=$this->db->prepare('SELECT * FROM tour WHERE id = ?');
+        $query->execute([$id]);
+
+        $tour=$query->fetch(PDO::FETCH_OBJ);
+
+        return $tour;
+
+    }
+
     function insertarTour($destinos, $paquete,$itinerario,$precio,$id_region){
 
     

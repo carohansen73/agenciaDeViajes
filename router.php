@@ -39,6 +39,12 @@ switch ($params[0]) {
             $controller =new TourController();
             $controller->mostrarTour($id);}
     break;  
+    case 'verDetalle':
+        if (isset($params[1])){
+            $id=$params[1];
+        $controller =new TourController();
+        $controller->detalleUnTour($id);}
+    break; 
     case 'insertarTour':
         $controller =new AdminTourController();
         $controller->insertarTour();

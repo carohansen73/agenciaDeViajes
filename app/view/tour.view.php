@@ -11,6 +11,16 @@ class TourView{
         $smarty->assign('tours', $tours);
         
         $smarty->display('templates/mostrarTour.tpl');
+          
+    }
+
+    function mostrarUnTours($tour){
+       
+        $smarty=new smarty();
+        
+        $smarty->assign('tour', $tour);
+
+        $smarty->display('templates/mostrarDetalleTour.tpl');
     
             
     }
