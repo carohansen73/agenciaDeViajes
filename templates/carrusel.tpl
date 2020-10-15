@@ -11,7 +11,7 @@
                   <img src="img/cordoba.jpg" class="d-block" alt="cordoba">
               </div>
               <div class="carousel-item">
-                  <img src="img/jujuy.jpg" class="d-block" alt="Campera Bordo">
+                  <img src="img/jujuy.jpg" class="d-block" alt="Jujuy">
               </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

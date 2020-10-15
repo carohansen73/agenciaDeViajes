@@ -20,8 +20,13 @@
                 <td><a class='btn btn-danger btn-sm' href='eliminarRegion/{$region->id}'>ELIMINAR</a></td>
                 <td><a class='btn btn-danger btn-sm' href='actualizarRegion/{$region->id}'>ACTUALIZAR</a></td>
             </tr>
-        {/foreach}    
+        {/foreach} 
+        
+        {if $error} 
+            {$error} 
+        {/if} 
         </tbody>
     </table>
+    
 
 {include 'footer.tpl'}

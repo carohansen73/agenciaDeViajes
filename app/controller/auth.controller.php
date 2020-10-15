@@ -27,7 +27,7 @@ class AuthController{
         $contraseña=$_POST['password'];
 
         if( empty ($email) || empty ($contraseña)){
-            $this->view->mostrarError('Faltan datos obligatorios');
+            $this->view->mostrarFormLogin("faltan datos obligatorios");
             die();
         }
 

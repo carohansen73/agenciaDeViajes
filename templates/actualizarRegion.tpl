@@ -3,6 +3,9 @@
  <h1>Region</h1>
  
  {include 'templates/form_actualizarRegion.tpl'}
+    {if $error} 
+        {$error} 
+    {/if} 
     <table class="table">
         <thead class="thead-light">
             <tr>
@@ -22,5 +25,6 @@
      
         </tbody>
     </table>
+
 
 {include 'footer.tpl'}

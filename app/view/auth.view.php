@@ -3,9 +3,10 @@ include_once('libs/Smarty.class.php');
 
 class AuthView{
 
-    function mostrarFormLogin() {
+    function mostrarFormLogin($error=null) {
         
         $smarty = new Smarty();
+        $smarty->assign ('error', $error);
         $smarty->display('templates/form_login.tpl');
     }
 

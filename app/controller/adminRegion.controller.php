@@ -32,7 +32,8 @@ class AdminRegionController{
         $informacion = $_POST['informacion'];
 
         if(empty($nombre) || empty($informacion)){
-            echo "<h2>ERROR , Faltan datos </h2>";
+            $regiones = $this->model-> obtenerRegiones();
+            $this->view->mostrarTablaRegiones($regiones, "faltan datos obligatorios");
             die();
         }
 
@@ -59,7 +60,8 @@ class AdminRegionController{
         $id = $_POST['id'];
 
         if(empty($nombre) || empty($informacion)){
-            echo "<h2>ERROR , Faltan datos </h2>";
+            $region=$this->model->obtenerRegion($id);
+            $this->view->mostrarRegion($region, "faltan datos obligatorios");
             die();
         }
        /*var_dump($nombre, $informacion, $id);
