@@ -49,9 +49,9 @@ class AuthController{
 
     }
 
-     function cerrarSeccion(){
+     function cerrarSesion(){
 
-        $this->authHelper->cerrarSeccion();
+        $this->authHelper->cerrarSesion();
 
         header("location: " .BASE_URL . "iniciar"); 
         

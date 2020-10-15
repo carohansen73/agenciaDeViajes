@@ -32,7 +32,7 @@ switch ($params[0]) {
     break;
     case 'cerrar':
         $controller = new AuthController();
-        $controller->cerrarSeccion();
+        $controller->cerrarSesion();
         break;    
     case 'home':
         $controller = new RegionController();

@@ -12,7 +12,7 @@ class AuthHelper {
         }
     }
 
-    function cerrarSeccion() {
+    function cerrarSesion() {
         session_start();
         session_destroy();
         header("Location: " . BASE_URL . 'login');
