@@ -70,8 +70,8 @@ class AdminTourController{
         $id = $_POST['id'];
 
         if( empty ($destinos) || empty ($paquete)|| empty ($itinerario)|| empty ($precio)|| empty ($id_region)){
-            $tours = $this->model-> obtenerTours();
-            $this->view->mostrarTour($tours,'Faltan datos obligatorios');
+            $tour=$this->model->detalleTour($id);
+            $this->view->mostrarTour($tour,'Faltan datos obligatorios');
             die();
         }
        

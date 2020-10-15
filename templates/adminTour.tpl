@@ -2,6 +2,12 @@
 {include 'header.tpl'} 
 <h1>Tours</h1>
 {include 'form_tour.tpl'} 
+    {if $error}
+        <div class="alert alert-primary">
+            {$error}
+        </div>
+    {/if}
+
 <table class="table">
         <thead class="thead-light">
             <tr>

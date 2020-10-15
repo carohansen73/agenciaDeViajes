@@ -3,6 +3,13 @@
  <h1>Regiones</h1>
 
  {include 'form_region.tpl'}
+ 
+    {if $error}
+        <div class="alert alert-primary">
+            {$error}
+        </div>
+    {/if}
+
     <table class="table">
         <thead class="thead-light">
             <tr>

@@ -21,6 +21,8 @@ class AdminTourView{
     $smarty=new smarty();
   
     $smarty->assign('tour', $tour);
+    
+    $smarty->assign('error', $error);
 
     $smarty->display('templates/actualizarTour.tpl');
      
