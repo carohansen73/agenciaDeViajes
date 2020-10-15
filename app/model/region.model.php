@@ -35,13 +35,23 @@ class RegionModel{
         return $this->db->lastInsertId();
 
     }
+
     function eliminarRegion($id){
+
         $query = $this->db->prepare('DELETE FROM region WHERE id = ?');
+
         $query->execute([$id]);
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 87bfc1ce3f17481ec6e841683864257874f48f28
     function actualizarRegion( $nombre, $informacion, $id){
+
+
         $query = $this->db->prepare('UPDATE region SET nombre = ?, informacion = ? WHERE id = ?');
+        
         $query->execute([$nombre, $informacion, $id]);
         
         

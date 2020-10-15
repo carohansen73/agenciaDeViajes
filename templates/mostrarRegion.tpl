@@ -11,7 +11,7 @@
                     <div class='card-body'>
                         <h5 class='card-title'>{$region->nombre }</h5>
                         <p class='card-text'> {$region->informacion }</p>
-                        <a href='region/{$region->id}' class='btn btn-info'>Ver detalle</a>
+                        <a href='region/{$region->id}' class='btn btn-info'>Ver Tour</a>
                     </div>
                 </div>
             </div>

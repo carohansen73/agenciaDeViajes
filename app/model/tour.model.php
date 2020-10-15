@@ -35,6 +35,16 @@ class TourModel{
         return $tour;
     }
 
+    function detalleTour($id){
+        $query=$this->db->prepare('SELECT * FROM tour WHERE id = ?');
+        $query->execute([$id]);
+
+        $tour=$query->fetch(PDO::FETCH_OBJ);
+
+        return $tour;
+
+    }
+
     function insertarTour($destinos, $paquete,$itinerario,$precio,$id_region){
 
     
@@ -49,5 +59,13 @@ class TourModel{
         $query=$this->db->prepare('DELETE FROM tour WHERE id =?');
         $query->execute([$id]);
     
+    }
+
+    function actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$id){
+
+        $query = $this->db->prepare('UPDATE tour SET destinos=?, paquete = ?, itinerario = ?, precio = ?, id_region = ? WHERE id=? ');
+        
+        $query->execute([$destinos, $paquete,$itinerario,$precio,$id_region,$id]);
+        
     }
 }

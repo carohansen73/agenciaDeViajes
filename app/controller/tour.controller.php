@@ -17,7 +17,14 @@ class TourController{
        
         $this->view-> mostrarTours($tour);
 
-        
     }
+    function detalleUnTour($id){
+
+        $tour = $this->model->detalleTour($id);
+       
+        $this->view->mostrarUnTours($tour);
+
+                
+}
      
 }

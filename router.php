@@ -5,6 +5,7 @@ include_once 'app/controller/tour.controller.php';
 include_once 'app/controller/auth.controller.php';
 include_once 'app/controller/adminRegion.controller.php';
 include_once 'app/controller/adminTour.controller.php';
+include_once 'app/controller/botones.controller.php';
 
 // defino la base url para la construccion de links con urls semánticas
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -29,6 +30,10 @@ switch ($params[0]) {
         $controller= new AuthController();
         $controller->iniciarSesion();
     break;
+    case 'cerrar':
+        $controller = new AuthController();
+        $controller->cerrarSeccion();
+        break;    
     case 'home':
         $controller = new RegionController();
         $controller->mostrarRegion();
@@ -39,6 +44,16 @@ switch ($params[0]) {
             $controller =new TourController();
             $controller->mostrarTour($id);}
     break;  
+    case 'mostrar':
+        $controller =new BotonController();
+        $controller->mostrar();
+    break; 
+    case 'verDetalle':
+        if (isset($params[1])){
+            $id=$params[1];
+        $controller =new TourController();
+        $controller->detalleUnTour($id);}
+    break; 
     case 'insertarTour':
         $controller =new AdminTourController();
         $controller->insertarTour();
@@ -68,6 +83,16 @@ switch ($params[0]) {
     case 'ActulizarRegion':
         $controller =new AdminRegionController();
         $controller->actualizar();
+    break;  
+    case 'actualizarTour':
+        $controller =new AdminTourController();
+        $id=$params[1];
+        $controller->actualizarTour($id);
+    break;  
+    case 'ActualizarTour':
+        $controller =new AdminTourController();
+        $controller->actualizar();
+    break;     
     case 'eliminarTour':
         if (isset($params[1]))
         $id=$params[1];

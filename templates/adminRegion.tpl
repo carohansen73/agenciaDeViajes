@@ -2,8 +2,6 @@
 
  <h1>Regiones</h1>
 
- <h2><a class='btn btn-danger btn-sm' href='adminTour'>MODIFICAR TOUR</a></h2>
- 
  {include 'form_region.tpl'}
     <table class="table">
         <thead class="thead-light">
