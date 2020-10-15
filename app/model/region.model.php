@@ -39,11 +39,12 @@ class RegionModel{
         $query = $this->db->prepare('DELETE FROM region WHERE id = ?');
         $query->execute([$id]);
     }
+    
     function actualizarRegion( $nombre, $informacion, $id){
         $query = $this->db->prepare('UPDATE region SET nombre = ?, informacion = ? WHERE id = ?');
         $query->execute([$nombre, $informacion, $id]);
         
-        die();
+        
     }
 
     function obtenerRegion($id){
