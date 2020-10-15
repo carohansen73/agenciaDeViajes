@@ -5,6 +5,7 @@ include_once 'app/controller/tour.controller.php';
 include_once 'app/controller/auth.controller.php';
 include_once 'app/controller/adminRegion.controller.php';
 include_once 'app/controller/adminTour.controller.php';
+include_once 'app/controller/botones.controller.php';
 
 // defino la base url para la construccion de links con urls semánticas
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -43,6 +44,10 @@ switch ($params[0]) {
             $controller =new TourController();
             $controller->mostrarTour($id);}
     break;  
+    case 'mostrar':
+        $controller =new BotonController();
+        $controller->mostrar();
+    break; 
     case 'verDetalle':
         if (isset($params[1])){
             $id=$params[1];

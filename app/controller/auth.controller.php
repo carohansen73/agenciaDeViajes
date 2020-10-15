@@ -39,7 +39,7 @@ class AuthController{
             $_SESSION['ID_USUARIO'] = $usuario->id;
             $_SESSION['EMAIL_USUARIO'] = $usuario->email;
 
-            header("Location: " . BASE_URL . "administrador");
+            header("Location: " . BASE_URL . "mostrar");
         } else {
             echo 'denegado';
         };

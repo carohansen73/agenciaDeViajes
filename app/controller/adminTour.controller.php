@@ -1,7 +1,7 @@
 <?php
 include_once 'app/view/adminTour.view.php';
 include_once 'app/model/tour.model.php';
-
+include_once 'app/helpers/auth.helper.php';
 
 class AdminTourController{
 
@@ -17,7 +17,6 @@ class AdminTourController{
 
         $this->authHelper = new AuthHelper();
 
-        // verifico que el usuario esté logueado siempre
         $this->authHelper->chequearLogin();
 
     }
