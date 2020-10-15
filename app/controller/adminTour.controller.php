@@ -37,7 +37,8 @@ class AdminTourController{
         $id_region=$_POST['id_region'];
 
         if( empty ($destinos) || empty ($paquete)|| empty ($itinerario)|| empty ($precio)|| empty ($id_region)){
-            $this->view->mostrarErrorTour('Faltan datos obligatorios');
+            $tours = $this->model-> obtenerTours();
+            $this->view->mostrarTablaTours($tours,'Faltan datos obligatorios');
             die();
         }
         $id=$this->model->insertarTour($destinos, $paquete,$itinerario,$precio,$id_region);
@@ -69,7 +70,8 @@ class AdminTourController{
         $id = $_POST['id'];
 
         if( empty ($destinos) || empty ($paquete)|| empty ($itinerario)|| empty ($precio)|| empty ($id_region)){
-            $this->view->mostrarErrorTour('Faltan datos obligatorios');
+            $tours = $this->model-> obtenerTours();
+            $this->view->mostrarTour($tours,'Faltan datos obligatorios');
             die();
         }
        

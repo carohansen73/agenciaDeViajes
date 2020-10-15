@@ -22,9 +22,6 @@
             </tr>
         {/foreach} 
         
-        {if $error} 
-            {$error} 
-        {/if} 
         </tbody>
     </table>
     

@@ -4,44 +4,35 @@ require_once('libs/Smarty.class.php');
 
 class AdminTourView{
       
-    function mostrarTablaTours($tours){
+  function mostrarTablaTours($tours,$error=null){
      
-        $smarty=new smarty();
+    $smarty=new smarty();
         
-        $smarty->assign('tours', $tours);
-        
-        $smarty->display('templates/adminTour.tpl');
-    
-    }
-    function mostrarTour($tour){
+    $smarty->assign('tours', $tours);
 
-      $smarty=new smarty();
+    $smarty->assign('error', $error);
+        
+    $smarty->display('templates/adminTour.tpl');
+    
+  }
+
+  function mostrarTour($tour, $error=null){
+
+    $smarty=new smarty();
   
-      $smarty->assign('tour', $tour);
-  
-      $smarty->display('templates/actualizarTour.tpl');
+    $smarty->assign('tour', $tour);
+
+    $smarty->display('templates/actualizarTour.tpl');
      
-
-    }
+  }
     
-    /*function mostrarTourDos($tour){ 
-
-      $smarty=new smarty();
-
-      $smarty->assign('tour', $tour);
-  
-      $smarty->display('templates/form_actualizarTour.tpl');
-
-    }*/
-  
-  
-  function mostrarErrorTour($msg){/*muestro el error*/
+  function mostrarErrorTour($msg){
 
     $smarty=new smarty();
     
     $smarty->assign('msg', $msg);
     
-    $smarty->display('templates/mostrarTour.tpl');
+    $smarty->display('templates/adminTour.tpl');
 
   }
 

@@ -12,5 +12,6 @@
             <textarea name="informacion" class="form-control" rows="3"></textarea>
         </div>
     </div>
+    
     <button type="submit" class="btn btn-primary">Guardar</button>
 </form>

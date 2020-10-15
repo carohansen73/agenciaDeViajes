@@ -33,7 +33,7 @@ class AdminRegionController{
 
         if(empty($nombre) || empty($informacion)){
             $regiones = $this->model-> obtenerRegiones();
-            $this->view->mostrarTablaRegiones($regiones, "faltan datos obligatorios");
+            $this->view->mostrarTablaRegiones($regiones, "Faltan datos obligatorios");
             die();
         }
 
@@ -61,11 +61,10 @@ class AdminRegionController{
 
         if(empty($nombre) || empty($informacion)){
             $region=$this->model->obtenerRegion($id);
-            $this->view->mostrarRegion($region, "faltan datos obligatorios");
+            $this->view->mostrarRegion($region, "Faltan datos obligatorios");
             die();
         }
-       /*var_dump($nombre, $informacion, $id);
-        die();*/
+      
         //necesito id para actualizar esa fila en particular//
         $this->model->actualizarRegion($nombre, $informacion, $id);
         

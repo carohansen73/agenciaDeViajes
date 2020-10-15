@@ -10,6 +10,7 @@ class RegionController{
     function __construct(){
 
         $this->model = new RegionModel();
+        
         $this->view = new RegionView();
     }
 

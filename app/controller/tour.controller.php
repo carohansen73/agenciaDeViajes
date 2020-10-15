@@ -6,11 +6,13 @@ class TourController{
     private $model;
     private $view;
 
-    function __construct()
-    {
+    function __construct(){
+        
         $this->model = new TourModel();
+
         $this->view = new TourView();
     }
+
     function mostrarTour($id){
         
         $tour = $this->model-> obtenerTour($id);
@@ -18,6 +20,7 @@ class TourController{
         $this->view-> mostrarTours($tour);
 
     }
+
     function detalleUnTour($id){
 
         $tour = $this->model->detalleTour($id);

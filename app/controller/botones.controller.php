@@ -7,11 +7,12 @@ class BotonController{
     private $view;
     private $authHelper;
 
-    function __construct()
-    {
+    function __construct(){
        
         $this->view = new BotonView();
+
         $this->authHelper = new AuthHelper();
+
         $this->authHelper->chequearLogin();
     }
         
@@ -19,7 +20,6 @@ class BotonController{
 
         $this->view-> mostrarBotones();
 
-        
     }
      
 }

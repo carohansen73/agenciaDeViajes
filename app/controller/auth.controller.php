@@ -27,7 +27,7 @@ class AuthController{
         $contraseña=$_POST['password'];
 
         if( empty ($email) || empty ($contraseña)){
-            $this->view->mostrarFormLogin("faltan datos obligatorios");
+            $this->view->mostrarFormLogin("Faltan datos obligatorios");
             die();
         }
 
@@ -40,8 +40,11 @@ class AuthController{
             $_SESSION['EMAIL_USUARIO'] = $usuario->email;
 
             header("Location: " . BASE_URL . "mostrar");
+
         } else {
-            echo 'denegado';
+
+            $this->view->mostrarFormLogin("Datos incorrectos");
+            
         };
 
     }
