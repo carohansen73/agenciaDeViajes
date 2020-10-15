@@ -42,11 +42,7 @@ class RegionModel{
 
         $query->execute([$id]);
     }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 87bfc1ce3f17481ec6e841683864257874f48f28
     function actualizarRegion( $nombre, $informacion, $id){
 
 
