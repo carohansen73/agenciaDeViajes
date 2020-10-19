@@ -9,6 +9,7 @@ class AuthHelper {
         session_start();
         if (!isset($_SESSION['ID_USUARIO'])){
             header("Location: " . BASE_URL . "iniciar");
+            die();
         }
     }
 

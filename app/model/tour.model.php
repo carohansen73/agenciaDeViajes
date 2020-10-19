@@ -26,8 +26,8 @@ class TourModel{
 
     function obtenerTour($id_region=null){
 
-      
-        $query=$this->db->prepare('SELECT * FROM tour WHERE id_region = ?');
+        $query=$this->db->prepare('SELECT t.*, r.nombre FROM `tour` t  JOIN region r ON t.id_region = r.id WHERE id_region = ?');
+        /*$query=$this->db->prepare('SELECT * FROM tour WHERE id_region = ?');*/
         $query->execute([$id_region]);
 
         $tour=$query->fetchAll(PDO::FETCH_OBJ);
