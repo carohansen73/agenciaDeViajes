@@ -4,7 +4,9 @@ body {
 }
 
 h1 {
+    margin-top: 10px;
     text-align: center;
+    font-family: 'CountryBlueprint', 'Courier New', Courier, monospace;
 }
 
 .centrar {

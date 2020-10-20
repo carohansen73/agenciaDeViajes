@@ -1,16 +1,19 @@
 <?php
 include_once 'app/view/tour.view.php';
 include_once 'app/model/tour.model.php';
+include_once 'app/helpers/auth.helper.php';
 
 class TourController{
     private $model;
     private $view;
+    
 
     function __construct(){
         
         $this->model = new TourModel();
-
+       
         $this->view = new TourView();
+        
     }
 
     function mostrarTour($id){

@@ -4,22 +4,22 @@
        
     <div class="form-group">
         <label>Destino</label>
-        <textarea name="destinos" class="form-control" rows="3"></textarea>
+        <textarea name="destinos" class="form-control" rows="3">{$tour->destinos}</textarea>
     </div>
        
     <div class="form-group">
         <label>Paquete</label>
-        <textarea name="paquete" class="form-control" rows="3"></textarea>
+        <textarea name="paquete" class="form-control" rows="3">{$tour->paquete}</textarea>
     </div>
 
     <div class="form-group">
         <label>Itinerario</label>
-        <textarea name="itinerario" class="form-control" rows="3"></textarea>
+        <textarea name="itinerario" class="form-control" rows="3">{$tour->itinerario}</textarea>
     </div>
 
     <div class="form-group">
         <label>Precio</label>
-        <textarea name="precio" class="form-control" rows="3"></textarea>
+        <textarea name="precio" class="form-control" rows="3">{$tour->precio}</textarea>
     </div> 
 
     <div class="form-group">

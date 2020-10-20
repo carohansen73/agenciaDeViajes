@@ -45,7 +45,7 @@ switch ($params[0]) {
             $controller->mostrarTour($id);}
     break;  
     case 'mostrar':
-        $controller =new BotonController();
+        $controller =new AdministradorController();
         $controller->mostrar();
     break; 
     case 'verDetalle':
@@ -71,6 +71,7 @@ switch ($params[0]) {
         $controller->insertarRegion();
     break;  
     case 'eliminarRegion':
+        
         $controller =new AdminRegionController();
         $id=$params[1];
         $controller->eliminarRegion($id);

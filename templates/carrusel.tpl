@@ -1,9 +1,11 @@
 <h1>Elegi tu RUMBO</h1>
-  <section class="centrar">
-    <div class="centrar">
-      <div class="container-lg">
+  
+    
+      <div class="container-fluid">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        
           <div class="carousel-inner">
+          
               <div class="carousel-item active">
                   <img src="img/mendoza.jpg" class="d-block" alt="Mendoza">
               </div>
@@ -24,5 +26,5 @@
           </a>
         </div>
       </div>
-    </div>
-  </section> 
+   
+
