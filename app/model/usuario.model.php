@@ -1,5 +1,5 @@
 <?php
-class usuarioModel{
+class UsuarioModel{
     
     private $db;
   
@@ -16,7 +16,20 @@ class usuarioModel{
     /*Devuelve el usuario*/
     function obtenerEmail($email){
         $query = $this->db->prepare('SELECT * FROM usuarios WHERE email = (?)');
+
         $query->execute([$email]);
+
         return $query->fetch(PDO::FETCH_OBJ);
+
+    }
+
+    function insertarUsuario($email,$password){
+
+        $query=$this->db->prepare ('INSERT INTO usuarios (email,password) VALUES(?,?)');
+
+        $query->execute([$email,$password]);
+
+        return $this->db->lastInsertId();
+
     }
 }

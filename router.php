@@ -6,6 +6,7 @@ include_once 'app/controller/auth.controller.php';
 include_once 'app/controller/adminRegion.controller.php';
 include_once 'app/controller/adminTour.controller.php';
 include_once 'app/controller/administrador.controller.php';
+include_once 'app/controller/usuario.controller.php';
 
 // defino la base url para la construccion de links con urls semánticas
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -34,6 +35,10 @@ switch ($params[0]) {
         $controller = new AuthController();
         $controller->cerrarSesion();
         break;    
+    case 'registrar':
+        $controller = new UsuarioController();
+        $controller->insertarUser();
+        break;  
     case 'home':
         $controller = new RegionController();
         $controller->mostrarRegion();

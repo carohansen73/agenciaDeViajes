@@ -22,6 +22,9 @@
           <li class="nav-item active">
             <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item ml-auto">
+              <a class="nav-link"  href="registrar">Registrarse</a>
+            </li>  
           {if isset($smarty.session.EMAIL_USUARIO)}
             <li class="nav-item ml-auto">
                 <a class="nav-link"  href="cerrar">{$smarty.session.EMAIL_USUARIO}(Cerrar Sesion)</a>

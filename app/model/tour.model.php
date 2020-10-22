@@ -54,6 +54,7 @@ class TourModel{
 
         return $this->db->lastInsertId();
     }   
+    
     function borrarTour($id){
 
         $query=$this->db->prepare('DELETE FROM tour WHERE id =?');
