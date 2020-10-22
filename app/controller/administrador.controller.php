@@ -1,15 +1,15 @@
 <?php
-include_once 'app/view/botones.view.php';
+include_once 'app/view/administrador.view.php';
 include_once 'app/helpers/auth.helper.php';
 
-class BotonController{
+class AdministradorController{
     
     private $view;
     private $authHelper;
 
     function __construct(){
        
-        $this->view = new BotonView();
+        $this->view = new AdministradorView();
 
         $this->authHelper = new AuthHelper();
 
