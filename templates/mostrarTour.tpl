@@ -1,6 +1,8 @@
 
-{include 'header.tpl'}  
-<h1>{$tours[0]->nombre}</h1>
+{include 'header.tpl'} 
+<div class='titulo'> 
+    <h1>{$tours[0]->nombre|upper}</h1>
+</div>
  <div class='container-fluid'>
         <div class='row'>
             {foreach from=$tours item= $tour}

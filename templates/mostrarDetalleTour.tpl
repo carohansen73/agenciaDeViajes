@@ -1,7 +1,7 @@
 
 {include 'header.tpl'}  
         <div class="detalle">
-                <h1>{$tour->destinos}</h1>
+                <h1>{$tour->destinos|upper}</h1>
                 <h2> Paquete </h2>
                 <p>{$tour->paquete}</p>
                 <h2> Itinerario </h2>
