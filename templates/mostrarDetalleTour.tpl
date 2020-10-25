@@ -9,8 +9,8 @@
                 <h2> Precio </h2>
                 <p>{$tour->precio}</p>
 
-                <button type="submit" class="btn btn-primary">Comprar</button>
+                <button type="submit" class="btn btn-info">Comprar</button>
 
-                <a href="{BASE_URL}">Volver</a>
+                <a href="{BASE_URL}" class="btn btn-info">Volver</a>
         </div>
 {include 'footer.tpl'}
