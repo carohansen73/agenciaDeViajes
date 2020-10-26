@@ -13,6 +13,7 @@ class TourController{
         $this->model = new TourModel();
        
         $this->view = new TourView();
+        session_start();
         
     }
 

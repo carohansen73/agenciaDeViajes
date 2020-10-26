@@ -14,6 +14,7 @@ class RegionController{
         $this->model = new RegionModel();
        
         $this->view = new RegionView();
+        session_start();
         
     }
 
