@@ -13,6 +13,7 @@ class AdminRegionController{
     function __construct(){
 
         $this->model = new RegionModel();
+        
         $this->view = new AdminRegionView();
 
         $this->authHelper = new AuthHelper();

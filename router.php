@@ -37,7 +37,7 @@ switch ($params[0]) {
         break;    
     case 'registrar':
         $controller = new UsuarioController();
-        $controller->insertarUser();
+        $controller->agregarUsuario();
         break;  
     case 'home':
         $controller = new RegionController();

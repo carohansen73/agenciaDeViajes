@@ -4,10 +4,19 @@ require_once('libs/Smarty.class.php');
 
 class UsuarioView{
 
-     function mostrarMensaje($msg){
-  
-        echo "<h2> $msg</h2>";
-        
+    function mostrarUsuario($usuario,$error=null){
+
+        $smarty=new smarty();
+
+        $smarty->assign('usuario', $usuario);
+    
+        $smarty->assign('error', $error);
+    
+        $smarty->display('templates/usuario.tpl');
+
+
     }
+
+     
 
 }

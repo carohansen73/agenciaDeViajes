@@ -23,9 +23,21 @@ class UsuarioModel{
 
     }
 
+    function obtenerUsuarios(){
+
+        $query = $this->db->prepare('SELECT * FROM  usuarios');
+
+        $query->execute();
+
+        $usuarios=$query->fetchAll(PDO::FETCH_OBJ);
+
+        return $usuarios;
+
+    }
+
     function insertarUsuario($email,$password){
 
-        $query=$this->db->prepare ('INSERT INTO usuarios (email,password) VALUES(?,?)');
+        $query=$this->db->prepare ("INSERT INTO usuarios (email, 'password') VALUES(?,?)");
 
         $query->execute([$email,$password]);
 
