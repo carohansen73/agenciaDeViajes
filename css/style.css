@@ -1,5 +1,5 @@
 body {
-    background-color: #d7fde0;
+    background-color: ghostwhite;
     color: black;
 }
 
@@ -23,10 +23,11 @@ h2 {
 }
 
 .titulodark {
-    background-color: #343a40;
+    /*background-color: #343a40;*/
+    background-color: gold;
     border-color: #454d55;
     border-bottom: 2px solid #dee2e6;
-    color: white;
+    color: black;
 }
 
 .centrar {

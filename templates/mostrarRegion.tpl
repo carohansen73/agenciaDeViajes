@@ -1,6 +1,6 @@
 {include 'header.tpl'} 
 {include 'carrusel.tpl'} 
-       
+    <main class="container">
         <div class='container-fluid'>
         <div class='row'>
         {foreach from=$regiones item= $region}

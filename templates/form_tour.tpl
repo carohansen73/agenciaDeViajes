@@ -1,29 +1,33 @@
 <!-- formulario de alta de tour -->
 <form action="insertarTour" method="POST" class="my-4">
-    <div class="row">
-        <div class="col-9">
-       
-    <div class="form-group">
-        <label>Destino</label>
-        <textarea name="destinos" class="form-control" rows="3"></textarea>
-    </div>
-       
-    <div class="form-group">
-        <label>Paquete</label>
-        <textarea name="paquete" class="form-control" rows="3"></textarea>
-    </div>
+    
+    
+    <div class="col-9">
+        <div class="form-row">
 
-    <div class="form-group">
-        <label>Itinerario</label>
-        <textarea name="itinerario" class="form-control" rows="3"></textarea>
-    </div>
-
-    <div class="form-group">
-        <label>Precio</label>
-        <textarea name="precio" class="form-control" rows="3"></textarea>
+            <div class="form-group col-md-5">
+                <label>Destino</label>
+                <textarea name="destinos" class="form-control" rows="1"></textarea>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Precio</label>
+                <textarea name="precio" class="form-control" rows="1"></textarea>
+            </div> 
+        </div> 
     </div> 
+    <div class="col-9">
+       
+        <div class="form-group w-75">
+            <label>Paquete</label>
+            <textarea name="paquete" class="form-control" rows="2"></textarea>
+        </div>
 
-     <div class="form-group">
+        <div class="form-group w-75">
+            <label>Itinerario</label>
+            <textarea name="itinerario" class="form-control" rows="2"></textarea>
+        </div>
+
+        <div class="form-group w-25">
                 <label>Region</label>
                 <select name="id_region" class="form-control">
                     <option value="1">Litoral</option>
@@ -36,5 +40,6 @@
                 </select>
             </div>
 
-    <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>    
 </form>

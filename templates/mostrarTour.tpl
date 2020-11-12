@@ -3,7 +3,8 @@
 <div class='titulo'> 
     <h1>{$tours[0]->nombre|upper}</h1>
 </div>
- <div class='container-fluid'>
+<main class="container">
+    <div class='container-fluid'>
         <div class='row'>
             {foreach from=$tours item= $tour}
                 

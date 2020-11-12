@@ -7,11 +7,15 @@
             </div>
         </div>
         
-        <div class="form-group w-50">
-            <label>Informacion</label>
-            <textarea name="informacion" class="form-control" rows="3"></textarea>
-        </div>
+        <div class="col-9 ">
+            <div class="form-group w-50">
+                <label>Informacion</label>
+                <textarea name="informacion" class="form-control" rows="1"></textarea>
+            </div>
+        </div>    
     </div>
     
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <div class="col-9 ">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
 </form>

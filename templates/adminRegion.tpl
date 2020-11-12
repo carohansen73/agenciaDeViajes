@@ -2,7 +2,8 @@
 <div class='titulodark'> 
     <h1>Regiones</h1>
 </div> 
- {include 'form_region.tpl'}
+<main class="container">
+    {include 'form_region.tpl'}
  
     {if $error}
         <div class="alert alert-primary">

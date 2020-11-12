@@ -1,5 +1,6 @@
 
 {include 'header.tpl'}  
+<main class="container">
         <div class="detalle">
                 <h1>{$tour->destinos|upper}</h1>
                 <h2> Paquete </h2>
@@ -13,4 +14,8 @@
 
                 <a href="{BASE_URL}" class="btn btn-info">Volver</a>
         </div>
+
+        {if isset($smarty.session.EMAIL_USUARIO)}
+                {include 'form_comentario.tpl'}
+        {/if}
 {include 'footer.tpl'}
