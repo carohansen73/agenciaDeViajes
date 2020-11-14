@@ -13,7 +13,7 @@ class AdministradorController{
 
         $this->authHelper = new AuthHelper();
 
-        $this->authHelper->chequearLogin();
+        $this->authHelper->chequearAdmin();
     }
         
     function mostrar(){

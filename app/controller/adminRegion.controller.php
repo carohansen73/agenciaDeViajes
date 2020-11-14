@@ -19,7 +19,9 @@ class AdminRegionController{
         $this->authHelper = new AuthHelper();
 
         // verifico que el usuario esté logueado siempre
-        $this->authHelper->chequearLogin();
+        
+        $this->authHelper->chequearAdmin();
+
     }
 
     function mostrarTabla(){

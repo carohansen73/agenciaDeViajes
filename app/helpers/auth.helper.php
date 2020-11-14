@@ -18,4 +18,12 @@ class AuthHelper {
         session_destroy();
         header("Location: " . BASE_URL . 'login');
     } 
+
+    function chequearAdmin(){
+        session_start();
+        if ($_SESSION['PERMISO_USUARIO']==0){
+            header("Location: " . BASE_URL . "home");
+            die();
+        }
+    }
 }    

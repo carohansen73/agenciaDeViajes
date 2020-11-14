@@ -38,7 +38,7 @@ class AuthController{
             session_start();
             $_SESSION['ID_USUARIO'] = $usuario->id;
             $_SESSION['EMAIL_USUARIO'] = $usuario->email;
-            $_SESSION['ROL_USUARIO']=$usuario->rol;
+            $_SESSION['PERMISO_USUARIO']=$usuario->permiso;
 
             header("Location: " . BASE_URL . "mostrar");
 
@@ -50,11 +50,11 @@ class AuthController{
 
     }
 
-     function cerrarSesion(){
+    function cerrarSesion(){
 
         $this->authHelper->cerrarSesion();
 
         header("location: " .BASE_URL . "iniciar"); 
         
-     }
+    }
 }

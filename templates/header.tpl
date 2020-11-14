@@ -22,7 +22,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
           </li>
-           {if isset($smarty.session.ROL_USUARIO)&&($smarty.session.ROL_USUARIO==1)}
+           {if isset($smarty.session.PERMISO_USUARIO)&&($smarty.session.PERMISO_USUARIO==1)}
             <li class="nav-item ml-auto">
               <a class="nav-link"  href="mostrar">Administrador</a>
             </li>  
