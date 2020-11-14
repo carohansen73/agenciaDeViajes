@@ -38,6 +38,7 @@ class AuthController{
             session_start();
             $_SESSION['ID_USUARIO'] = $usuario->id;
             $_SESSION['EMAIL_USUARIO'] = $usuario->email;
+            $_SESSION['ROL_USUARIO']=$usuario->rol;
 
             header("Location: " . BASE_URL . "mostrar");
 
