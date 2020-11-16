@@ -1,7 +1,6 @@
 
-
     <div class="mt-5 w-25 mx-auto">
-        <form action="registrar" method="POST">
+        <form action="verificarRegistro" method="POST">
 
             <div class="form-group">
                 <label for="email"> Email </label>

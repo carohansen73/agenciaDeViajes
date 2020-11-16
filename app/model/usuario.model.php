@@ -35,11 +35,11 @@ class UsuarioModel{
 
     }
 
-    function insertarUsuario($email,$password){
+    function insertarUsuario($email,$password,$permiso){
 
-        $query=$this->db->prepare ("INSERT INTO usuarios (email, 'password') VALUES(?,?)");
+        $query=$this->db->prepare ("INSERT INTO usuarios (email, password) VALUES(?,?,?)");
 
-        $query->execute([$email,$password]);
+        $query->execute([$email,$password,$permiso]);
 
         return $this->db->lastInsertId();
 

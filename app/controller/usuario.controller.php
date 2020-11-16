@@ -15,19 +15,39 @@ class UsuarioController{
         $this->view = new UsuarioView();
         
     }
+    function mostrarRegistro(){
+
+        $this->view->mostrarRegistro();
+
+    }
 
     function agregarUsuario(){
-        
+
         $email=$_POST['email'];
-        $password=$_POST['password'];
       
+        $password=$_POST['password'];
+
+        $permiso=0;
 
         if( empty ($email) || empty ($password)){
-            $usuario = $this->model-> obtenerUsuarios();
-            $this->view->mostrarUsuario($usuario,'Error al ingresar datos');
+            $this->view->mostrarRegistro('Faltan ingresar datos');
             die();
         }
-        $id = $this->model->insertarUsuario($email, $password);
-        /*header("location: " . BASE_URL . "home");*/
+
+        $controlarEmail=$this->model->obtenerEmail($email);//controla que no este el mismo nombre
+            if(empty($controlarEmail)){
+
+            $password=password_hash($password, PASSWORD_DEFAULT);
+
+        
+            $this->model->insertarUsuario($email, $password,$permiso);
+                
+                header("location: " . BASE_URL . "iniciar");
+            
+        }
+        else{
+            $this->view->mostrarRegistro('El usuario ya existe');
+        }
     }
+
 }

@@ -37,6 +37,10 @@ switch ($params[0]) {
         break;    
     case 'registrar':
         $controller = new UsuarioController();
+        $controller->mostrarRegistro();
+        break;  
+    case 'verificarRegistro':
+        $controller = new UsuarioController();
         $controller->agregarUsuario();
         break;  
     case 'home':
