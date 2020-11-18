@@ -1,7 +1,9 @@
 <?php
 
 class DBHelper {
+
     public function __construct() {
+
     }
 
     public function connect(){
@@ -9,4 +11,5 @@ class DBHelper {
         $db = new PDO('mysql:host=localhost;'.'dbname=db_agenciaviajes;charset=utf8', 'root', '');
         return $db;
     }
+
 }    
