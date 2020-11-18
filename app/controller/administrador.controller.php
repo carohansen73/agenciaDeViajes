@@ -19,7 +19,6 @@ class AdministradorController{
     function mostrar(){
 
         $this->view-> mostrarBotones();
-
     }
      
 }

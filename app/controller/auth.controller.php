@@ -43,9 +43,7 @@ class AuthController{
             header("Location: " . BASE_URL . "mostrar");
 
         } else {
-
             $this->view->mostrarFormLogin("Datos incorrectos");
-            
         };
 
     }
@@ -53,7 +51,6 @@ class AuthController{
     function cerrarSesion(){
 
         $this->authHelper->cerrarSesion();
-
         header("location: " .BASE_URL . "iniciar"); 
         
     }

@@ -11,7 +11,6 @@ class UsuarioController{
     function __construct(){
         
         $this->model = new UsuarioModel();
-       
         $this->view = new UsuarioView();
         
     }
@@ -24,9 +23,7 @@ class UsuarioController{
     function agregarUsuario(){
 
         $email=$_POST['email'];
-      
         $password=$_POST['password'];
-
         $permiso=0;
 
         if( empty ($email) || empty ($password)){
@@ -39,11 +36,9 @@ class UsuarioController{
 
             $password=password_hash($password, PASSWORD_DEFAULT);
 
-        
             $this->model->insertarUsuario($email, $password,$permiso);
                 
                 header("location: " . BASE_URL . "iniciar");
-            
         }
         else{
             $this->view->mostrarRegistro('El usuario ya existe');

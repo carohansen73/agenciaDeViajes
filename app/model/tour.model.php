@@ -1,20 +1,16 @@
 <?php
+include_once 'app/helpers/db.helper.php';
 
 class TourModel{
     
-    private $db;
+    private $dbHelper;
 
     function __construct(){
-       $this->db= $this-> conectar();
-    }
-
-    private function conectar(){
-        $db = new PDO('mysql:host=localhost;'.'dbname=db_agenciaviajes;charset=utf8', 'root', '');
-        return $db;
+        $this->dbHelper = new DBHelper();
+        $this->db = $this->dbHelper->connect();
     }
 
     function obtenerTours(){
-
       
         $query=$this->db->prepare('SELECT * FROM tour');
         $query->execute();
@@ -42,14 +38,11 @@ class TourModel{
         $tour=$query->fetch(PDO::FETCH_OBJ);
 
         return $tour;
-
     }
 
     function insertarTour($destinos, $paquete,$itinerario,$precio,$id_region){
 
-    
         $query=$this->db->prepare('INSERT INTO tour (destinos, paquete, itinerario, precio, id_region) VALUES(?,?,?,?,?)');
-        
         $query->execute([$destinos, $paquete,$itinerario,$precio,$id_region]);
 
         return $this->db->lastInsertId();
@@ -59,14 +52,11 @@ class TourModel{
 
         $query=$this->db->prepare('DELETE FROM tour WHERE id =?');
         $query->execute([$id]);
-    
     }
 
     function actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$id){
 
         $query = $this->db->prepare('UPDATE tour SET destinos=?, paquete = ?, itinerario = ?, precio = ?, id_region = ? WHERE id=? ');
-        
         $query->execute([$destinos, $paquete,$itinerario,$precio,$id_region,$id]);
-        
     }
 }

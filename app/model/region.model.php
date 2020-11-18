@@ -3,14 +3,11 @@ include_once 'app/helpers/db.helper.php';
 
 class RegionModel{
 
-    private $db;
-
     private $dbHelper;
   
     function __construct(){
 
         $this->dbHelper = new DBHelper();
-
         $this->db = $this->dbHelper->connect();
 
     }
