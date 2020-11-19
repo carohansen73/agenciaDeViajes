@@ -62,11 +62,11 @@ class ApiCommentsController{
     public function add($params=null){
         $body = $this->getData();
         
-        $comentario = $body->comentario;
+        $texto = $body->texto;
         $calificacion= $body->calificacion;
         $idTour = $body->id_tour;
 
-        $id = $this->model->insert($comentario, $calificacion, $idTour);
+        $id = $this->model->insert($texto, $calificacion, $idTour);
         if($id>0){
             $this->view->response("Se agrego el comentario  con el id = $id, exitosamente", 200);
         }else {
@@ -84,11 +84,11 @@ class ApiCommentsController{
         $body = $this->getData();
         //var_dump($this->data);
         
-        $comentario = $body->comentario;
+        $texto = $body->texto;
         $calificacion= $body->calificacion;
         $idTour = $body->id_tour;
 
-        $success = $this->model->update($idComentario, $comentario, $calificacion, $idTour);
+        $success = $this->model->update($idComentario, $texto, $calificacion, $idTour);
         if($success){
             $this->view->response("Se modifico el comentario  con el id = $idComentario, exitosamente", 200);
         }else {

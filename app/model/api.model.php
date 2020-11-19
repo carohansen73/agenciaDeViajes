@@ -50,17 +50,17 @@ class ApiModel{
         return $query->rowCount();
     }
 
-    function insert($comentario, $calificacion, $idTour){
+    function insert($texto, $calificacion, $idTour){
         $query = $this->db->prepare('INSERT INTO comentario (texto, calificacion, id_tour) VALUES (?,?,?)');
-        $query->execute([$comentario, $calificacion, $idTour]);
+        $query->execute([$texto, $calificacion, $idTour]);
 
         return $this->db->lastInsertId();
     }
 
-    function update($id, $comentario, $calificacion, $idTour){
+    function update($id, $texto, $calificacion, $idTour){
 
         $query = $this->db->prepare('UPDATE comentario SET texto = ?, calificacion = ?, id_tour = ? WHERE id = ?');
-        $result = $query->execute([$comentario, $calificacion, $idTour, $id]);
+        $result = $query->execute([$texto, $calificacion, $idTour, $id]);
         
         return $result;
     }
