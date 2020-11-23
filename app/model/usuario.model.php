@@ -29,10 +29,29 @@ class UsuarioModel{
 
     function insertarUsuario($email,$password,$permiso){
 
-        $query=$this->db->prepare ("INSERT INTO usuarios (email, password) VALUES(?,?,?)");
+        $query=$this->db->prepare ("INSERT INTO usuarios (email, password, permiso) VALUES(?,?,?)");
         $query->execute([$email,$password,$permiso]);
 
         return $this->db->lastInsertId();
+
+    }
+        /*tovdavia no funciona*/
+    function detalleUsuario($id){
+
+        $query=$this->db->prepare('SELECT * FROM usuarios WHERE id = ?');
+        $query->execute([$id]);
+
+        $usuario=$query->fetch(PDO::FETCH_OBJ);
+
+        return $usuario;
+
+    }
+
+    function actualizarUsuario($email,$password,$permiso,$id){
+
+        $query = $this->db->prepare('UPDATE usuarios SET email = ?, password = ?, permiso= ? WHERE id = ?');
+        
+        $query->execute([$email, $password,$permiso,$id]);
 
     }
 }

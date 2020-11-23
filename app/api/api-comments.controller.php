@@ -1,5 +1,5 @@
 <?php
-require_once 'app/model/api.model.php';
+require_once 'app/model/comentario.model.php';
 require_once 'app/api/api.view.php';
 
 class ApiCommentsController{
