@@ -2,7 +2,7 @@
 <h1>Tours</h1>
 <main class="container">
 
-    {include 'form_actualizarTour.tpl'} 
+    
 
     {if $error}
         <div class="alert alert-primary">
@@ -29,5 +29,6 @@
             
             </tbody>
         </table>
+        {include 'form_actualizarTour.tpl'} 
     
 {include 'footer.tpl'}

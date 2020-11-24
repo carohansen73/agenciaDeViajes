@@ -1,5 +1,5 @@
 <!-- formulario de alta de tour -->
-<form action="insertarTour" method="POST" class="my-4">
+<form action="insertarTour" method="POST" enctype=multipart/form-data  class="my-4">
     
     
     <div class="col-9">
@@ -25,6 +25,10 @@
         <div class="form-group w-75">
             <label>Itinerario</label>
             <textarea name="itinerario" class="form-control" rows="2"></textarea>
+        </div>
+        <div class="form-group w-75">
+            <label>Imagen</label>
+            <input type="file" name="input_name" id="imageToUpload">
         </div>
 
         <div class="form-group w-25">

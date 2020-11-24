@@ -28,6 +28,16 @@ class AdminTourController{
         $this->view->mostrarTablaTours($tours);
     }
 
+    function uniqueSaveName($realName, $tempName) {
+        
+        $filePath = "img/" . uniqid("", true) . "." 
+            . strtolower(pathinfo($realName, PATHINFO_EXTENSION));
+
+        move_uploaded_file($tempName, $filePath);
+
+        return $filePath;
+    }
+
     function insertarTour(){
         
         $destinos=$_POST['destinos'];
@@ -41,8 +51,19 @@ class AdminTourController{
             $this->view->mostrarTablaTours($tours,'Faltan datos obligatorios');
             die();
         }
-        $id=$this->model->insertarTour($destinos, $paquete,$itinerario,$precio,$id_region);
+        // tiene que tener algun de estos formatos
+        if($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" || $_FILES['input_name']['type'] == "image/png" ){
+            
+            $imagen=$this->uniqueSaveName($_FILES['input_name']['name'], 
+                                        $_FILES['input_name']['tmp_name']);
 
+            $this->model->insertarTour($destinos, $paquete,$itinerario,$precio,$id_region,$imagen);
+        }
+        else {//si no tengo imagen
+
+            $this->model->insertarTour($destinos, $paquete,$itinerario,$precio,$id_region);
+        }
+        
         header("location: " . BASE_URL . "adminTour");
     }
 
@@ -74,11 +95,20 @@ class AdminTourController{
             $this->view->mostrarTour($tour,'Faltan datos obligatorios');
             die();
         }
-       
-        $this->model->actualizarTour($destinos, $paquete, $itinerario,$precio,$id_region,$id);
+        // tiene que tener algun de estos formatos
+        if($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" || $_FILES['input_name']['type'] == "image/png" ){
+            
+            $imagen=$this->uniqueSaveName($_FILES['input_name']['name'], 
+                                        $_FILES['input_name']['tmp_name']);
+
+            $this->model->actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$imagen,$id);
+        }
+        else {//si no tengo imagen
+
+            $this->model->actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$id);
+        }
 
         header("Location: " . BASE_URL . "adminTour");
     }
-
    
 }

@@ -39,24 +39,46 @@ class TourModel{
 
         return $tour;
     }
+    function insertarTour($destinos, $paquete,$itinerario,$precio,$id_region,$imagen=null){
 
-    function insertarTour($destinos, $paquete,$itinerario,$precio,$id_region){
+        if($imagen){
+            $query=$this->db->prepare('INSERT INTO tour (destinos, paquete, itinerario, precio, id_region, imagen) VALUES(?,?,?,?,?,?)');
+            
+            $params=[$destinos, $paquete,$itinerario,$precio,$id_region,$imagen];
 
-        $query=$this->db->prepare('INSERT INTO tour (destinos, paquete, itinerario, precio, id_region) VALUES(?,?,?,?,?)');
-        $query->execute([$destinos, $paquete,$itinerario,$precio,$id_region]);
+        }
+        else{
+            $query=$this->db->prepare('INSERT INTO tour (destinos, paquete, itinerario, precio, id_region) VALUES(?,?,?,?,?)');
+            
+            $params=[$destinos, $paquete,$itinerario,$precio,$id_region];
+            
+        }
+
+        $query->execute($params);
 
         return $this->db->lastInsertId();
     }   
-    
+
     function borrarTour($id){
 
         $query=$this->db->prepare('DELETE FROM tour WHERE id =?');
         $query->execute([$id]);
     }
 
-    function actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$id){
+    function actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$imagen=null,$id){
 
-        $query = $this->db->prepare('UPDATE tour SET destinos=?, paquete = ?, itinerario = ?, precio = ?, id_region = ? WHERE id=? ');
-        $query->execute([$destinos, $paquete,$itinerario,$precio,$id_region,$id]);
+        if($imagen){
+            $query = $this->db->prepare('UPDATE tour SET destinos=?, paquete = ?, itinerario = ?, precio = ?, id_region = ?, imagen = ? WHERE id=? ');
+            $params=[$destinos, $paquete,$itinerario,$precio,$id_region,$imagen,$id];
+        }
+        else{
+
+            $query = $this->db->prepare('UPDATE tour SET destinos=?, paquete = ?, itinerario = ?, precio = ?, id_region = ? WHERE id=? ');
+            $params=[$destinos, $paquete,$itinerario,$precio,$id_region,$id];
+        }
+
+        $query->execute($params);
+        
     }
+    
 }

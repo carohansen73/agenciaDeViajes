@@ -1,4 +1,4 @@
-<form action="ActualizarTour" method="POST" class="my-4">
+<form action="ActualizarTour" method="POST" enctype=multipart/form-data  class="my-4">
     <div class="col-9">
         <div class="form-row">
     
@@ -22,6 +22,11 @@
         <div class="form-group">
             <label>Itinerario</label>
             <textarea name="itinerario" class="form-control" rows="3">{$tour->itinerario}</textarea>
+        </div>
+
+        <div class="form-group w-75">
+            <label>Imagen</label>
+            <input type="file" name="input_name" id="imageToUpload">
         </div>
 
         <div class="form-group w-25">
