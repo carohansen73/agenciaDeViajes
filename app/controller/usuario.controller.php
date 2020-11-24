@@ -14,10 +14,9 @@ class UsuarioController{
         $this->view = new UsuarioView();
         
     }
+
     function mostrarRegistro(){
-
         $this->view->mostrarRegistro();
-
     }
 
     function agregarUsuario(){

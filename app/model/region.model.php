@@ -23,13 +23,17 @@ class RegionModel{
         return $region;
      
     }
-    function insertarRegion($nombre, $informacion){
+    function insertarRegion($nombre, $informacion, $imagen = null){
 
-        //2-Enviar la consulta(los datos), lindeo los parametros (?,?,?)
-        $query = $this->db->prepare('INSERT INTO region (nombre, informacion) VALUES (?,?)');
-        $query->execute([$nombre, $informacion]);
-
-        //3-no necesito obtener respuesta xq estoy insertando
+        //cargar en la BBDD con o sin imagen
+        if($imagen){
+            $query = $this->db->prepare('INSERT INTO region (nombre, informacion, imagen) VALUES (?,?,?)');
+            $query->execute([$nombre, $informacion, $imagen]);
+        }else{
+            $query = $this->db->prepare('INSERT INTO region (nombre, informacion) VALUES (?,?)');
+            $query->execute([$nombre, $informacion]);
+        }
+       
         return $this->db->lastInsertId();
 
     }
@@ -41,13 +45,15 @@ class RegionModel{
         $query->execute([$id]);
     }
     
-    function actualizarRegion( $nombre, $informacion, $id){
+    function actualizarRegion( $nombre, $informacion, $id, $imagen = null){
 
-
-        $query = $this->db->prepare('UPDATE region SET nombre = ?, informacion = ? WHERE id = ?');
-        
-        $query->execute([$nombre, $informacion, $id]);
-        
+        if($imagen){
+            $query = $this->db->prepare('UPDATE region SET nombre = ?, informacion = ?, imagen = ? WHERE id = ?');
+            $query->execute([$nombre, $informacion, $imagen, $id]);
+        }else{
+            $query = $this->db->prepare('UPDATE region SET nombre = ?, informacion = ? WHERE id = ?');
+            $query->execute([$nombre, $informacion, $id]);
+        } 
         
     }
 

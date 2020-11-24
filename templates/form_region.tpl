@@ -1,4 +1,4 @@
-<form action="InsertarRegion" method="POST" class="my-4">
+<form action="InsertarRegion" method="POST" class="my-4" enctype="multipart/form-data">
     <div class=" mx-auto">
         <div class="col-9 ">
             <div class="form-group w-50">
@@ -12,7 +12,10 @@
                 <label>Informacion</label>
                 <textarea name="informacion" class="form-control" rows="1"></textarea>
             </div>
-        </div>    
+        </div> 
+        
+        <label for="img"> Imagen: </label>
+        <input type="file" name="input_name" id="imageToUpload">   
     </div>
     
     <div class="col-9 ">
