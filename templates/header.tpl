@@ -11,35 +11,37 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Rumbo Argentina</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav  d-flex w-100">
-          <li class="nav-item active">
-            <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
-          </li>
-           {if isset($smarty.session.PERMISO_USUARIO)&&($smarty.session.PERMISO_USUARIO==1)}
-            <li class="nav-item ml-auto">
-              <a class="nav-link"  href="mostrar">Administrador</a>
-            </li>  
-          {/if}
-          <li class="nav-item ml-auto">
-              <a class="nav-link"  href="registrar">Registrarse</a>
-            </li>  
-          {if isset($smarty.session.EMAIL_USUARIO)}
-            <li class="nav-item ml-auto">
-                <a class="nav-link"  href="cerrar">{$smarty.session.EMAIL_USUARIO}(Cerrar Sesion)</a>
-            </li> 
-          {else} 
-            <li class="nav-item ml-auto">
-              <a class="nav-link"  href="iniciar">Iniciar Sesion</a>
-            </li>  
-          {/if}
-        </ul>
-      </div>
-    </nav> 
-  </header>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Rumbo Argentina</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav  d-flex w-100">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    {if isset($smarty.session.PERMISO_USUARIO)&&($smarty.session.PERMISO_USUARIO==1)}
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link"  href="administrador">Administrador</a>
+                        </li>  
+                    {/if}
+                    {if !isset($smarty.session.EMAIL_USUARIO)}
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link"  href="registrar">Registrarse</a>
+                        </li>  
+                    {/if}
+                    {if isset($smarty.session.EMAIL_USUARIO)}
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link"  href="cerrar">{$smarty.session.EMAIL_USUARIO}(Cerrar Sesion)</a>
+                        </li> 
+                    {else} 
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link"  href="iniciar">Iniciar Sesion</a>
+                        </li>  
+                    {/if}
+                </ul>
+            </div>
+        </nav> 
+    </header>

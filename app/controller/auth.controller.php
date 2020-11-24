@@ -40,7 +40,7 @@ class AuthController{
             $_SESSION['EMAIL_USUARIO'] = $usuario->email;
             $_SESSION['PERMISO_USUARIO']=$usuario->permiso;
 
-            header("Location: " . BASE_URL . "mostrar");
+            header("Location: " . BASE_URL . "administrador");
 
         } else {
             $this->view->mostrarFormLogin("Datos incorrectos");

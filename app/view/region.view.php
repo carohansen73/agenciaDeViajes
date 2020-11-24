@@ -6,16 +6,11 @@ class RegionView{
 
   function mostrarRegiones($regiones){
 
-        $smarty=new smarty();
+      $smarty=new smarty();
 
-        $smarty->assign('regiones', $regiones);
+      $smarty->assign('regiones', $regiones);
 
-        $smarty->display('templates/mostrarRegion.tpl');
-
+      $smarty->display('templates/mostrarRegion.tpl');
         
   }
-
-  
-  
-
 }

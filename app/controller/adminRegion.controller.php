@@ -42,12 +42,12 @@ class AdminRegionController{
 
         $id = $this->model->insertarRegion($nombre, $informacion);
          // redirigimos al  la tabla
-         header("Location: " . BASE_URL . "administrador"); 
+         header("Location: " . BASE_URL . "adminRegion"); 
     }
     
     function eliminarRegion($id){
         $this->model->eliminarRegion($id);
-        header("Location: " . BASE_URL . "administrador");
+        header("Location: " . BASE_URL . "adminRegion");
     }
 
     function actualizarRegion ($id){
@@ -71,7 +71,7 @@ class AdminRegionController{
         //necesito id para actualizar esa fila en particular//
         $this->model->actualizarRegion($nombre, $informacion, $id);
         
-        header("Location: " . BASE_URL . "administrador");
+        header("Location: " . BASE_URL . "adminRegion");
     }
     
 }

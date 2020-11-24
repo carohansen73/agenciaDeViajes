@@ -43,6 +43,10 @@ switch ($params[0]) {
         $controller = new UsuarioController();
         $controller->agregarUsuario();
         break;  
+    case 'administrador':
+        $controller =new AdministradorController();
+        $controller->mostrar();
+        break; 
     case 'home':
         $controller = new RegionController();
         $controller->mostrarRegion();
@@ -53,10 +57,6 @@ switch ($params[0]) {
             $controller =new TourController();
             $controller->mostrarTour($id);}
     break;  
-    case 'mostrar':
-        $controller =new AdministradorController();
-        $controller->mostrar();
-    break; 
     case 'verDetalle':
         if (isset($params[1])){
             $id=$params[1];
@@ -67,7 +67,7 @@ switch ($params[0]) {
         $controller =new AdminTourController();
         $controller->insertarTour();
     break;  
-    case 'administrador':
+    case 'adminRegion':
         $controller = new AdminRegionController();
         $controller->mostrarTabla();
     break;
@@ -80,7 +80,6 @@ switch ($params[0]) {
         $controller->insertarRegion();
     break;  
     case 'eliminarRegion':
-        
         $controller =new AdminRegionController();
         $id=$params[1];
         $controller->eliminarRegion($id);
