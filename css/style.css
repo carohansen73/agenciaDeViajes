@@ -14,7 +14,7 @@ h2 {
 }
 
 .titulo {
-    background-color: teal;
+    background-color: rgba(121, 168, 11, 0.9);
     color: white;
     border-bottom-style: dashed;
     border-bottom-color: teal;
