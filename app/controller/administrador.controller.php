@@ -33,5 +33,15 @@ class AdministradorController{
         $this->model->cambiarPermiso($usuario, $id);
         header("Location: " . BASE_URL . "adminUsuarios");
     }
+    
+    function eliminarUsuario($id){
+
+        $this->model->eliminar($id);
+        
+        header("Location: " . BASE_URL . "adminUsuarios");
+
+        
+
+    }
      
 }

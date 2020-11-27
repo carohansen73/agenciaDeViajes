@@ -1,4 +1,4 @@
-<form action="ActualizarTour" method="POST" enctype=multipart/form-data  class="my-4">
+<form action="ActualizarTour" method="POST" enctype="multipart/form-data"  class="my-4">
     <div class="col-9">
         <div class="form-row">
     

@@ -10,8 +10,8 @@
                 <th scope="col">ID</th>
                 <th scope="col">Usuario</th>
                 <th scope="col">Permisos</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col">Eliminar</th>
+                <th scope="col">Modificar</th>
             </tr>
         </thead>
         <tbody>

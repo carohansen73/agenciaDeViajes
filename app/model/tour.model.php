@@ -65,7 +65,7 @@ class TourModel{
         $query->execute([$id]);
     }
 
-    function actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$imagen=null,$id){
+    function actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$id,$imagen=null){
 
         if($imagen){
             $query = $this->db->prepare('UPDATE tour SET destinos=?, paquete = ?, itinerario = ?, precio = ?, id_region = ?, imagen = ? WHERE id=? ');

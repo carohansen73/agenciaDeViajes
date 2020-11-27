@@ -107,6 +107,7 @@ class AdminTourController{
 
             $this->model->actualizarTour($destinos, $paquete,$itinerario,$precio,$id_region,$id);
         }
+        
 
         header("Location: " . BASE_URL . "adminTour");
     }

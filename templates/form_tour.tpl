@@ -1,5 +1,5 @@
 <!-- formulario de alta de tour -->
-<form action="insertarTour" method="POST" enctype=multipart/form-data  class="my-4">
+<form action="insertarTour" method="POST" enctype="multipart/form-data"  class="my-4">
     
     
     <div class="col-9">

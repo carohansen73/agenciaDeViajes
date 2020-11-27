@@ -75,4 +75,11 @@ class UsuarioModel{
         }
         
     }
+
+    function eliminar($id){
+
+        $query=$this->db->prepare('DELETE FROM usuarios WHERE id =?');
+        $query->execute([$id]);
+
+    }
 }
