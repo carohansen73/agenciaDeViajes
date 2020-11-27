@@ -108,6 +108,16 @@ switch ($params[0]) {
         $controller =new AdminTourController();
         $controller->eliminarTour($id);
     break;  
+    case 'adminUsuarios':
+        $controller = new AdministradorController();
+        $controller->showUsuarios();
+    break;  
+    case 'modificarPermiso' :
+        if (isset($params[1])){
+        $id=$params[1];};
+        $controller = new AdministradorController();
+        $controller-> cambiarPermiso($id);
+        break;
     default:
         echo('404 Page not found');
         break;

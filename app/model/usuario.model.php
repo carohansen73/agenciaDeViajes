@@ -18,13 +18,15 @@ class UsuarioModel{
         return $query->fetch(PDO::FETCH_OBJ);
     }
 
+    
+    
     function obtenerUsuarios(){
 
         $query = $this->db->prepare('SELECT * FROM  usuarios');
         $query->execute();
         $usuarios=$query->fetchAll(PDO::FETCH_OBJ);
-
         return $usuarios;
+
     }
 
     function insertarUsuario($email,$password,$permiso){
@@ -53,5 +55,24 @@ class UsuarioModel{
         
         $query->execute([$email, $password,$permiso,$id]);
 
+    }
+
+    function obtenerUsuario($id){
+        $query = $this->db->prepare('SELECT * FROM usuarios WHERE id = (?)');
+        $query->execute([$id]);
+        $usuario = $query->fetch(PDO::FETCH_OBJ);
+        return $usuario;
+
+    }
+
+    function cambiarPermiso($usuario, $id){
+        if($usuario->permiso == 0){
+            $query = $this->db->prepare('UPDATE usuarios SET permiso = 1 WHERE id = ?');
+            $query->execute([$id]);
+        }else if ($usuario->permiso == 1){
+            $query = $this->db->prepare('UPDATE usuarios SET permiso = 0 WHERE id = ?');
+            $query->execute([$id]);
+        }
+        
     }
 }

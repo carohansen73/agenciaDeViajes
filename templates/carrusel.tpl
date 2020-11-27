@@ -13,6 +13,9 @@
         <div class="carousel-item">
           <img src="img/carusel2.jpg" class="d-block w-100" alt="...">
         </div>
+        <div class="carousel-item">
+          <img src="img/bariloche-postada1.jpg" class="d-block w-100" alt="...">
+        </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
