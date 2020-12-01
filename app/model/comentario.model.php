@@ -12,25 +12,14 @@ class ApiModel{
     }
 
     function getAll(){
-    /*----------------SORT y ORDER---------------*/
 
-    /*   $sql = 'SELECT * FROM comentario';
-       if (isset($parametros['order'])){
-           $sql .=' ORDER BY '.$parametros['order'];
-           if (isset($parametros['sort'])){
-               $sql .=' '.$parametros['sort'];
-           }
-       }
-       /*echo ($sql);
-       echo(PHP_EOL);
-       die();*//*
-
-       $query = $this->db->prepare($sql);
-    */
         $query=$this->db->prepare('SELECT * FROM comentario');
         $query->execute();
-        $comentarios=$query->fetchAll(PDO::FETCH_OBJ);
-        return $comentarios;
+
+        $comentario=$query->fetchAll(PDO::FETCH_OBJ);
+
+        return $comentario;
+
     }
 
     function getAllByTour($id_tour){

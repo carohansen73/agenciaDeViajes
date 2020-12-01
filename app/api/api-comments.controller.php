@@ -18,79 +18,71 @@ class ApiCommentsController{
         return json_decode($this->data); 
     }  
 
-    public function getAll(){
+    function getAll(){
+        $comentarios = $this->model->getAll();
 
-/*-----------SORT y ORDER-------------*/  
-
-    /*    $parametros = [];
-
-        if(isset($_GET['sort'])){
-            $parametros['sort'] = $_GET['sort'];
-        }
-        if(isset($_GET['order'])){
-            $parametros['order'] = $_GET['order'];
-        }
-        //print_r($parametros);
-        //die();
-        $comentarios = $this->model->getAll($parametros);
-    */
-        $comentarios=$this->model->getAll();
-        $this->view->response($comentarios,200);
-        
+      
+        //$comentarios = $this->model->getAll(); //$this->model->getAll();
+        $this->view->response($comentarios, 200);
     }
 
     function getAllByTour($params=null){
         //el router me manda un arreglo asociativo de parametros llamado $params, null por si no lo uso
         $id=$params[':IDTOUR'];
-        
 
-        $comentario = $this->model->getAllByTour($id);
+        $comentarios = $this->model->getAllByTour($id);
         
-        $this->view->response($comentario, 200);
+        $this->view->response($comentarios, 200);
         
     }
 
     function delete($params=null){
         $idComments= $params[':ID'];
-        $comentario=$this->model->remove($idComments);
+        $success=$this->model->remove($idComments);
 
-        if($comentario){
-            $this->view->response('El comentario se elimino exitosamente',200);
-        }
-        else{
-            $this->view->response("Error al obtener el comentario id = $idComments, puede ser que no exista",404);
+        if($success){
+            $this->view->response("El comentario con el id = $idComments se elimino exitosamente", 200);
+        }else{
+            $this->view->response("Error al obtener el comentario id = $idComments, puede ser que no exista", 404);
         }
     }
 
     function add($params=null){
 
         session_start();
-
-        $idUsuario= $_SESSION['ID_USUARIO'];
+        $idUsuario = $_SESSION['ID_USUARIO'];
         
         $body = $this->getData();
 
-        $texto=$body->texto;
-
-        $calificacion=$body->calificacion;
-
-        $id_tour=$body->id_tour;
+        $texto = $body->texto;
+        $calificacion = $body->calificacion;
+        $id_tour = $body->id_tour;
 
         
-            $id=$this->model->insert($texto,$calificacion,$id_tour,$idUsuario);
+        $id=$this->model->insert($texto,$calificacion,$id_tour,$idUsuario);
 
-            if($id > 0){
-
-                $this->view->response('El comentario se inserto bien',200);
-
-            }
-            else{
-
-                $this->view->response('Error al subir el comentario',404);
-            }
+        if($id > 0){
+            $comentario = $this->model->get($id);
+            $this->view->response($comentario, 200);
+        }else{
+            $this->view->response('Error al subir el comentario',500);
+        }
         
+    }   
+
+    function get($params=null){
+        //el router me manda un arreglo asociativo de parametros llamado $params, null por si no lo uso
+        $id=$params[':ID'];
+        $comentario = $this->model->get($id);
+        //PARA VER SI EXISTE EL COMENTARIO, SINO 404 NOT FOUND
+        if ($comentario){
+            $this->view->response($comentario, 200);
+        }else{
+            $this->view->response("el comentario  con el id = $id no existe", 404);
+        }
+        
+        //var_dump($id);
     }
-        
     
     public function update($params=null){/*BORRAR*/
         $idComentario=$params[':ID'];
@@ -107,5 +99,9 @@ class ApiCommentsController{
         }else {
             $this->view->response("el comentario no se pudo modificar", 500);
         }
+    }
+
+    public function showerror($params=null){
+        $this->view->response("El recurso solicitado no existe", 404);
     }
 }

@@ -39,12 +39,11 @@ class RegionModel{
     }
 
     function eliminarRegion($id){
-
         $query = $this->db->prepare('DELETE FROM region WHERE id = ?');
-
         $query->execute([$id]);
+        return $query->rowCount();
     }
-    
+
     function actualizarRegion( $nombre, $informacion, $id, $imagen = null){
 
         if($imagen){
@@ -67,7 +66,7 @@ class RegionModel{
          //4- cerrar la conexion (PDO lo hace solo)
          return $region;
       
-     }
+    }
 
     
 };

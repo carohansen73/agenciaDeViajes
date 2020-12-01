@@ -30,5 +30,29 @@
         {if isset($smarty.session.EMAIL_USUARIO)}
                 {include 'form_comentario.tpl'}
         {/if}
-        <script src="js/comments-manu.js"></script>
+
+        <div id="error"> 
+        </div>
+
+        {if isset($smarty.session.PERMISO_USUARIO)&&($smarty.session.PERMISO_USUARIO==1)}
+                <div class="col-8">
+                        <ul id="comentariosAdmin" class="list-group mt-5">
+                        </ul>     
+                </div>
+        {else}
+                <div class="col-8">
+                        <ul  id="comentarios" class="list-group mt-5">
+                        </ul>  
+                </div>
+        {/if}
+
+
+<!-- script de JS -->
+        {if isset($smarty.session.PERMISO_USUARIO)&&($smarty.session.PERMISO_USUARIO==1)}
+                <script src="js/comentariosAdmin.js"></script>
+        {else}
+                <script src="js/comentarios.js"></script>
+        {/if}
+
+       <!-- <script src="js/comments-manu.js"></script> -->
 {include 'footer.tpl'}

@@ -71,8 +71,14 @@ class AdminRegionController{
     }
     
     function eliminarRegion($id){
-        $this->model->eliminarRegion($id);
-        header("Location: " . BASE_URL . "adminRegion");
+        $success = $this->model->eliminarRegion($id);
+        if ($success){
+            header("Location: " . BASE_URL . "adminRegion");
+        }else{
+            $regiones = $this->model-> obtenerRegiones();
+            $this->view->mostrarTablaRegiones($regiones, "No se puede eliminar el elemento seleccionado");
+        }
+        
     }
 
     function actualizarRegion ($id){
