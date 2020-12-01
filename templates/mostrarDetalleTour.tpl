@@ -30,4 +30,5 @@
         {if isset($smarty.session.EMAIL_USUARIO)}
                 {include 'form_comentario.tpl'}
         {/if}
+        <script src="js/comments-manu.js"></script>
 {include 'footer.tpl'}

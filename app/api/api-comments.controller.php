@@ -12,6 +12,11 @@ class ApiCommentsController{
         $this->view = new ApiView();
         $this->data = file_get_contents("php://input");
     }
+    
+    //Funcion para convertir de string(la variable de entrada) a json
+    function getData(){ 
+        return json_decode($this->data); 
+    }  
 
     public function getAll(){
 
@@ -34,17 +39,15 @@ class ApiCommentsController{
         
     }
 
-    function get($params=null){
+    function getAllByTour($params=null){
         //el router me manda un arreglo asociativo de parametros llamado $params, null por si no lo uso
-        $id=$params[':ID'];
-        $comentario = $this->model->get($id);
-     
-        //PARA VER SI EXISTE EL COMENTARIO, SINO 404 NOT FOUND
-        if ($comentario){
-            $this->view->response($comentario, 200);
-        }else{
-            $this->view->response("El comentario con el id = $id no existe", 404);
-        }
+        $id=$params[':IDTOUR'];
+        
+
+        $comentario = $this->model->getAllByTour($id);
+        
+        $this->view->response($comentario, 200);
+        
     }
 
     function delete($params=null){
@@ -59,27 +62,37 @@ class ApiCommentsController{
         }
     }
 
-    public function add($params=null){
-        $body = $this->getData();
+    function add($params=null){
+
+        session_start();
+
+        $idUsuario= $_SESSION['ID_USUARIO'];
         
-        $texto = $body->texto;
-        $calificacion= $body->calificacion;
-        $idTour = $body->id_tour;
+        $body = $this->getData();
 
-        $id = $this->model->insert($texto, $calificacion, $idTour);
-        if($id>0){
-            $this->view->response("Se agrego el comentario  con el id = $id, exitosamente", 200);
-        }else {
-            $this->view->response("el comentario no se pudo insertar", 500);
-        }
+        $texto=$body->texto;
+
+        $calificacion=$body->calificacion;
+
+        $id_tour=$body->id_tour;
+
+        
+            $id=$this->model->insert($texto,$calificacion,$id_tour,$idUsuario);
+
+            if($id > 0){
+
+                $this->view->response('El comentario se inserto bien',200);
+
+            }
+            else{
+
+                $this->view->response('Error al subir el comentario',404);
+            }
+        
     }
-
-    //Funcion para convertir de string(la variable de entrada) a json
-    function getData(){ 
-        return json_decode($this->data); 
-    }  
-
-    public function update($params=null){
+        
+    
+    public function update($params=null){/*BORRAR*/
         $idComentario=$params[':ID'];
         $body = $this->getData();
         //var_dump($this->data);

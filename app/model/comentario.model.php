@@ -33,7 +33,18 @@ class ApiModel{
         return $comentarios;
     }
 
-    function get($id){
+    function getAllByTour($id_tour){
+
+        $query=$this->db->prepare('SELECT * FROM comentario  INNER JOIN usuarios ON id_usuario = usuarios.id WHERE id_tour = ?');
+        $query->execute([$id_tour]);
+
+        $comentario=$query->fetchAll(PDO::FETCH_OBJ);
+
+        return $comentario;
+
+    }
+
+    function get($id){/*BORRAR*/
 
         $query=$this->db->prepare('SELECT * FROM comentario WHERE id = ?');
         $query->execute([$id]);
@@ -57,7 +68,7 @@ class ApiModel{
         return $this->db->lastInsertId();
     }
 
-    function update($id, $texto, $calificacion, $idTour){
+    function update($id, $texto, $calificacion, $idTour){/*BORRAR*/
 
         $query = $this->db->prepare('UPDATE comentario SET texto = ?, calificacion = ?, id_tour = ? WHERE id = ?');
         $result = $query->execute([$texto, $calificacion, $idTour, $id]);
