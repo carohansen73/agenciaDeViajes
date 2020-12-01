@@ -36,8 +36,10 @@ class UsuarioController{
             $password=password_hash($password, PASSWORD_DEFAULT);
 
             $this->model->insertarUsuario($email, $password,$permiso);
+
+            session_start();
                 
-                header("location: " . BASE_URL . "iniciar");
+                header("location: " . BASE_URL . "home");
         }
         else{
             $this->view->mostrarRegistro('El usuario ya existe');
