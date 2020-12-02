@@ -118,7 +118,7 @@ switch ($params[0]) {
         $controller = new AdministradorController();
         $controller-> cambiarPermiso($id);
         break;
-        case 'eliminarUsuario' :
+    case 'eliminarUsuario' :
             if (isset($params[1])){
             $id=$params[1];};
             $controller = new AdministradorController();

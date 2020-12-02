@@ -62,8 +62,8 @@ class ApiCommentsController{
         $id=$this->model->insert($texto,$calificacion,$id_tour,$idUsuario);
 
         if($id > 0){
-            $comentario = $this->model->get($id);
-            $this->view->response($comentario, 200);
+           // $comentario = $this->model->get($id);
+            $this->view->response("comentario ok",  200);
         }else{
             $this->view->response('Error al subir el comentario',500);
         }

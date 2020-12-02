@@ -50,9 +50,9 @@ class ApiModel{
         return $query->rowCount();
     }
 
-    function insert($texto, $calificacion, $idTour){
-        $query = $this->db->prepare('INSERT INTO comentario (texto, calificacion, id_tour) VALUES (?,?,?)');
-        $query->execute([$texto, $calificacion, $idTour]);
+    function insert($texto, $calificacion, $idTour, $idUsuario){
+        $query = $this->db->prepare('INSERT INTO comentario (texto, calificacion, id_tour, id_usuario) VALUES (?,?,?,?)');
+        $query->execute([$texto, $calificacion, $idTour, $idUsuario]);
 
         return $this->db->lastInsertId();
     }

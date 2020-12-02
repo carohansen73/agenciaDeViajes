@@ -33,7 +33,7 @@ function showComentarios(comentarios) {
     container.innerHTML = '';
 
     for (let comentario of comentarios) {
-        container.innerHTML += `<li class='list-group-item d-flex justify-content-between'> ${comentario.texto} - ${comentario.calificacion} - <button class="eliminar btn btn-danger" data-id="${comentario.id}" >ELIMINAR</button> </li>`;
+        container.innerHTML += `<li class='list-group-item d-flex justify-content-between'> ${comentario.email} - ${comentario.texto} - ${comentario.calificacion} - <button class="eliminar" data-id="${comentario.id}" >ELIMINAR</button> </li>`;
     }
 
     document.querySelectorAll(".eliminar").forEach(boton => {
