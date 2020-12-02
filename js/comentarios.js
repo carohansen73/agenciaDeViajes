@@ -33,7 +33,7 @@ function showComentarios(comentarios) {
     container.innerHTML = '';
 
     for (let comentario of comentarios) {
-        container.innerHTML += `<li class='list-group-item d-flex justify-content-between'> ${comentario.texto} - ${comentario.calificacion} </li>`;
+        container.innerHTML += `<li class='list-group-item d-flex justify-content-between'> ${comentario.email} | ${comentario.texto} - ${comentario.calificacion} </li>`;
     }
 
 }
@@ -66,7 +66,7 @@ async function addComment(idTour) {
 
             console.log(c);
             //llamo para traer los comentarios con el nuevo insertado
-            getAllByTour(idTour);
+            getAll(idTour);
 
         } catch (e) {
             console.log(e);

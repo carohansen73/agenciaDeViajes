@@ -24,7 +24,10 @@ class ApiModel{
 
     function getAllByTour($id_tour){
 
-        $query=$this->db->prepare('SELECT * FROM comentario  INNER JOIN usuarios ON id_usuario = usuarios.id WHERE id_tour = ?');
+        $query=$this->db->prepare('SELECT com.id, usr.email, com.texto, com.calificacion 
+                                    FROM comentario AS com 
+                                    INNER JOIN usuarios as usr 
+                                    ON com.id_usuario = usr.id WHERE com.id_tour = ?');;
         $query->execute([$id_tour]);
 
         $comentario=$query->fetchAll(PDO::FETCH_OBJ);

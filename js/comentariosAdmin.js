@@ -40,6 +40,7 @@ function showComentarios(comentarios) {
         boton.addEventListener('click', e => {
             e.preventDefault();
             let id = boton.getAttribute("data-id");
+
             deleteComment(id);
         })
     })
