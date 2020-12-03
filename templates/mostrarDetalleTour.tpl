@@ -3,6 +3,9 @@
 <main class="container">
         <div class="detalle">
                 <h1>{$tour->destinos|upper}</h1>
+                {if isset($tour->imagen)}
+                        <p> <img src="{$tour->imagen}" class='card-img-top' alt='{$tour->destinos}'> </p>
+                    {/if}
                 <h2> Paquete </h2>
                 <p>{$tour->paquete}</p>
                 <h2> Itinerario </h2>
