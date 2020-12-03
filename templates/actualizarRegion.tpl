@@ -28,5 +28,5 @@
             </tbody>
         </table>
 
-
+<a class='btn btn-info mt-5 w-25 mx-auto' href='administrador'>Volver</a>
 {include 'footer.tpl'}

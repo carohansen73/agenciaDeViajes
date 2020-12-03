@@ -96,7 +96,9 @@ class AdminTourController{
             die();
         }
         // tiene que tener algun de estos formatos
-        if($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" || $_FILES['input_name']['type'] == "image/png" ){
+        if($_FILES['input_name']['type'] == "image/jpg" ||
+         $_FILES['input_name']['type'] == "image/jpeg" || 
+         $_FILES['input_name']['type'] == "image/png" ){
             
             $imagen=$this->uniqueSaveName($_FILES['input_name']['name'], 
                                         $_FILES['input_name']['tmp_name']);

@@ -30,5 +30,7 @@
             </tbody>
         </table>
         {include 'form_actualizarTour.tpl'} 
+
+        <a class='btn btn-info mt-5 w-25 mx-auto' href='administrador'>Volver</a>
     
 {include 'footer.tpl'}

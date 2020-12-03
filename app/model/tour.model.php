@@ -69,7 +69,7 @@ class TourModel{
 
         if($imagen){
             $query = $this->db->prepare('UPDATE tour SET destinos=?, paquete = ?, itinerario = ?, precio = ?, id_region = ?, imagen = ? WHERE id=? ');
-            $params=[$destinos, $paquete,$itinerario,$precio,$id_region,$imagen,$id];
+            $params=[$destinos, $paquete,$itinerario,$precio,$id_region,$id,$imagen];
         }
         else{
 

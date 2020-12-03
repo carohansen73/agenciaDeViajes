@@ -11,7 +11,7 @@
                 <div class='col mt-5'>
                     <div class='card' style='width: 18rem;'>
                     {if isset($tour->imagen)}
-                        <p> <img src="{$tour->imagen}" class='card-img-top' alt='...'> </p>
+                        <p> <img width="100" height="190" src="{$tour->imagen}" class='card-img-top' alt='...'> </p>
                     {/if}
                         <div class='card-body'>
                             <h5 class='card-title'>{$tour->destinos }</h5>

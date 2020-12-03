@@ -3,6 +3,7 @@
     <h1>Regiones</h1>
 </div> 
 <main class="container">
+
     {include 'form_region.tpl'}
  
     {if $error}
@@ -41,5 +42,5 @@
         </tbody>
     </table>
     
-
+<a class='btn btn-info mt-5 w-25 mx-auto' href='administrador'>Volver</a>
 {include 'footer.tpl'}

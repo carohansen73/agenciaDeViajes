@@ -3,6 +3,8 @@
     <h1>USUARIOS</h1>
 </div> 
 <main class="container">
+
+
     
     <table class="table ">
         <thead class="thead-dark">
@@ -32,5 +34,5 @@
         </tbody>
     </table>
     
-
+<a class='btn btn-info mt-5 w-25 mx-auto' href='administrador'>Volver</a>
 {include 'footer.tpl'}
