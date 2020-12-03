@@ -29,6 +29,7 @@ h2 {
     /* border-color: #454d55;
     border-bottom: 2px solid #dee2e6;*/
     color: black;
+    margin-bottom: 50px;
 }
 
 .centrar {
@@ -49,4 +50,29 @@ h5 {
     padding: 15px;
     background: #FFEB81;
     /*background-color: #28a745;*/
+}
+
+.usuario {
+    font-weight: bold;
+    color: rgba(121, 168, 11, 0.9);
+    margin-right: 10px;
+}
+
+.calificacion {
+    font-weight: bold;
+    color: gold;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #343a40;
+    text-transform: uppercase;
+    align-items: flex-end;
+    margin-top: 50px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: gold;
 }

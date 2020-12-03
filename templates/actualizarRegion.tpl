@@ -1,6 +1,7 @@
 {include 'header.tpl'} 
-
+<div class='titulodark'>
     <h1>Region</h1>
+</div>
     <main class="container">
         {include 'templates/form_actualizarRegion.tpl'}
         {if $error}
@@ -9,7 +10,7 @@
             </div>
         {/if}
         <table class="table">
-            <thead class="thead-light">
+            <thead class="thead-dark">
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nombre</th>

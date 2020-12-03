@@ -33,7 +33,7 @@ function showComentarios(comentarios) {
     container.innerHTML = '';
 
     for (let comentario of comentarios) {
-        container.innerHTML += `<li class='list-group-item d-flex justify-content-between'> ${comentario.email} | ${comentario.texto} - ${comentario.calificacion} </li>`;
+        container.innerHTML += `<li class='list-group-item d-flex justify-content-between'> <span class="usuario"> ${comentario.email} </span>  ${comentario.texto} - <span class="calificacion">  ${comentario.calificacion} </span>- </li>`;
     }
 
 }

@@ -38,13 +38,13 @@
         </div>
 
         {if isset($smarty.session.PERMISO_USUARIO)&&($smarty.session.PERMISO_USUARIO==1)}
-                <div class="col-8">
-                        <ul id="comentariosAdmin" class="list-group mt-5">
+                <div class="col-8  w-100">
+                        <ul id="comentariosAdmin" class="list-group mt-5 w-100">
                         </ul>     
                 </div>
         {else}
-                <div class="col-8">
-                        <ul  id="comentarios" class="list-group mt-5">
+                <div class="col-8  w-100">
+                        <ul  id="comentarios" class="list-group mt-5 w-100">
                         </ul>  
                 </div>
         {/if}

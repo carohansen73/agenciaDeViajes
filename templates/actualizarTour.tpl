@@ -1,5 +1,7 @@
 {include 'header.tpl'} 
-<h1>Tours</h1>
+<div class='titulodark'>
+    <h1>Tours</h1>
+</div>
 <main class="container">
 
     
@@ -10,7 +12,7 @@
         </div>
     {/if}
     <table class="table">
-            <thead class="thead-light">
+            <thead class="thead-dark">
                 <tr>
                     <th scope="col">Destino</th>
                     <th scope="col">Paquete</th>
