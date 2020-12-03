@@ -76,7 +76,7 @@ class AdminRegionController{
             header("Location: " . BASE_URL . "adminRegion");
         }else{
             $regiones = $this->model-> obtenerRegiones();
-            $this->view->mostrarTablaRegiones($regiones, "No se puede eliminar el elemento seleccionado");
+            $this->view->mostrarTablaRegiones($regiones, "No se puede eliminar porque tiene tours asociados");
         }
         
     }

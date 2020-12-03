@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-12-2020 a las 15:13:40
--- Versión del servidor: 10.4.13-MariaDB
--- Versión de PHP: 7.4.8
+-- Tiempo de generación: 03-12-2020 a las 19:12:29
+-- Versión del servidor: 10.1.21-MariaDB
+-- Versión de PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -40,20 +39,26 @@ CREATE TABLE `comentario` (
 --
 
 INSERT INTO `comentario` (`id`, `texto`, `calificacion`, `id_tour`, `id_usuario`) VALUES
-(97, 'gfhfghfgh', 2, 9, 3),
-(98, 'gfjnfghfgh', 3, 9, 3),
-(99, 'sdfsdf', 2, 9, 3),
-(100, 'vcbcvb', 2, 9, 3),
-(101, 'dfgfdg', 2, 9, 3),
-(102, 'fdgdfg', 1, 9, 3),
 (104, 'podria mejorar', 2, 20, 3),
-(105, 'dfghdfh', 3, 20, 3),
-(107, 'dfgdfg', 3, 11, 3),
 (108, 'bjnfgj', 4, 19, 3),
 (109, 'bjnfgj', 5, 19, 3),
-(110, 'fdgdfg', 2, 20, 3),
 (112, 'muy bien viaje', 3, 20, 3),
-(113, 'muy buen tour', 3, 14, 3);
+(113, 'muy buen tour', 3, 14, 3),
+(114, 'Hermoso viaje, nos encantaron las cataratas, muy buena atencion', 5, 9, 2),
+(115, 'muy divertido el viaje, esperamos volver pronto', 4, 9, 2),
+(116, 'nos encantaron las cataratas!', 5, 10, 2),
+(117, 'muy buena atencion', 4, 10, 2),
+(118, 'hermoso paisaje nos brinda nuestra Argentina!', 5, 20, 2),
+(119, 'muy buen viaje!', 4, 26, 2),
+(120, 'disfrutamos mucho del viaje y de la ñieve', 5, 12, 2),
+(121, 'muy lindos lugares recorrimos', 5, 28, 2),
+(122, 'nos encantaron las sierras y la buena onda de los guias', 5, 28, 2),
+(123, 'estubo bueno el viaje, buena atencion de parte de la empresa', 4, 21, 2),
+(124, 'nos encanto el viaje', 5, 9, 2),
+(125, 'hermosa ciudad, hermosas las sierras', 5, 30, 3),
+(126, 'nos gusto mucho el viaje', 3, 30, 3),
+(127, 'de 10! divino paisaje!', 5, 18, 3),
+(129, 'espectacular viaje, hermoso el faro del fin del mundo', 5, 22, 3);
 
 -- --------------------------------------------------------
 
@@ -116,7 +121,10 @@ INSERT INTO `tour` (`id`, `destinos`, `paquete`, `itinerario`, `precio`, `id_reg
 (21, 'Mar Del Plara, Miramar y Necochea 6 Dias y 5 Noches', 'Incluye aereos, traslado en bus, excursiones y media pension', 'Dos dias y dos noches en Ciudad de Mar Del Plata\r\nUn Dia en Miramar\r\nTres dias en Necochea', '$30000', 6, 'img/5fc010d1d6b815.95675511.jpg'),
 (22, 'Ushuaia, El Chaltén y El Calafate. 7 DIAS|8 NOCHES.', 'Aéreos | Traslados | Alojamiento en hoteles 4* | Excursiones', 'Dia 1: Llegada a Ushuaia, recorrereos el Presidio de Reincidentes y el museo del Fin del Mundo\r\nDia 2: Navegacion por el canal de Beagle y parque nacional Tierra del Fuego.\r\nDia 3: Recorrido a traves del valle del rio Olivia, donde conoceremos los agos Fagnano y Escondido.\r\nDia 4: Traslado al Calafate, visita al Glaciar Perito Moreno en el Parque Nacional Homónimo.\r\nDia 5: Navegamos el Lago Argentino en el Parque Nacional  Los Glaciares.\r\nDia 6: Traslado a El Chalten, recorrido por el bosque, avistamiento en el Mirador del Torre y conoceremos la laguna Capri.\r\nDia 7: dia libre en e Chalten y viaje de regreso.', '$50000', 4, 'img/5fc00e09bab575.88735186.jpg'),
 (25, 'Glaciar Perito Moreno 4 DIAS|3 NOCHES', 'Pasajes en avion, traslado, media pension, hotel', 'Día 1:Traslado Aeropuerto-Hotel en Calafate. Día 2:Excursión Glaciar Perito Moreno. Día 3:Excursion Todo Glaciares. Día 4:Traslado Hotel-Aeropuerto de Calafate.', '$30000', 4, 'img/5fc02937b93cd0.69742169.jpg'),
-(26, 'Salta, Cachi y Cafayate 5 DIAS|4 NOCHES', 'Incluye pasajes aereos, hotel, traslados, media pension', 'Día 1: Salida a primera hora de la mañana desde Buenos Aires en vuelo DIRECTO. Llegada a la ciudad de Salta y Traslado al hotel. Por la tarde, CITY TOUR (incluido). Alojamiento en Salta.\r\nDía 2: Luego del Desayuno, salida hacia CAFAYATE viajando a través de la panorámica QUEBRADA DEL RÍO LAS CONCHAS. Alojamiento en Cafayate.\r\nDía 3: Desayuno en Cafayate y Tiempo Libre hasta el traslado hacia la Ciudad de Salta. Resto del día Libre en Salta. Alojamiento.\r\nDía 4: Luego del Desayuno salida en Excursión de Día Entero a CACHI atravesando el PARQUE NACIONAL LOS CARDONES y la RECTA de TIN TIN.\r\nAlojamiento en Salta.\r\nDía 5: Desayuno en el hotel. A la hora acordada traslado al aeropuerto para tomar tu vuelo de regreso a Buenos Aires.\r\n\r\n\r\n', '$50000', 2, 'img/5fc8eb0f74a537.75748035.jpg');
+(26, 'Salta, Cachi y Cafayate 5 DIAS|4 NOCHES', 'Incluye pasajes aereos, hotel, traslados, media pension', 'Día 1: Salida a primera hora de la mañana desde Buenos Aires en vuelo DIRECTO. Llegada a la ciudad de Salta y Traslado al hotel. Por la tarde, CITY TOUR (incluido). Alojamiento en Salta.\r\nDía 2: Luego del Desayuno, salida hacia CAFAYATE viajando a través de la panorámica QUEBRADA DEL RÍO LAS CONCHAS. Alojamiento en Cafayate.\r\nDía 3: Desayuno en Cafayate y Tiempo Libre hasta el traslado hacia la Ciudad de Salta. Resto del día Libre en Salta. Alojamiento.\r\nDía 4: Luego del Desayuno salida en Excursión de Día Entero a CACHI atravesando el PARQUE NACIONAL LOS CARDONES y la RECTA de TIN TIN.\r\nAlojamiento en Salta.\r\nDía 5: Desayuno en el hotel. A la hora acordada traslado al aeropuerto para tomar tu vuelo de regreso a Buenos Aires.\r\n\r\n\r\n', '$50000', 2, 'img/5fc8eb0f74a537.75748035.jpg'),
+(27, 'Cordoba y Villa General Belgrano | 7 DIAS  | 6 NOCHES', 'Aereo | traslados | 6 noches de alojamiento en hoteles 4* | alquiler de vehículo', '3 noches en córdoba, alojamiento en el hotel Córdoba en el hotel Amerian Córdoba Park. \r\nServicio de alquiler de auto y de asistencia al viajero  para recorrer los puntos clave la ciudad.\r\n3 noches de alojamiento en Villa General Belgrano en el hotel Howard Johnson.\r\n', '$46.000', 5, 'img/5fc8fa329fac37.00941863.jpg'),
+(28, 'Cosquin, Valle de Traslasierra y San Marcos Sierra | 7 NOCHES | 8 DIAS', 'aéreos | traslados a los diferentes destinos y tours | alojamiento en hoteles 4* con desayuno incluido | excursiones', 'Alojamiento en Cosquin, alojamiento en hotel La Puerta del Sol, recorrido por El Cerro Pan de Azúcar y  El Balneario Las Siete Cascadas\r\nAlojamiento en Traslasierra en el complejo de cabañas La Agustina, recorremos Mina Clavero.\r\nAlojamiento en San Marcos Sierra , alojamiento en hotel Marcos Sierra. recorremos la Reserva Natural 3 Piletas del Rio Quilpo.', '$50.000', 5, 'img/5fc9002c9efd59.31133824.jpg'),
+(30, 'Sierra de la Ventana y Villa Ventana | 4 DIAS | 3 NOCHES', 'traslados | alojamiento en complejos de cabañas | excursiones por las sierras', 'alojamiento en el complejo Las Americas de Sierra de la Ventana\r\nexcursion a la sierra de la ventana\r\nalojamiento en el complejo del Sol , Villa Ventana', '$20.000', 6, 'img/5fc9285066b330.80857165.jpg');
 
 -- --------------------------------------------------------
 
@@ -184,26 +192,22 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 --
 -- AUTO_INCREMENT de la tabla `region`
 --
 ALTER TABLE `region`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
 --
 -- AUTO_INCREMENT de la tabla `tour`
 --
 ALTER TABLE `tour`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
 --
 -- Restricciones para tablas volcadas
 --
@@ -220,7 +224,6 @@ ALTER TABLE `comentario`
 --
 ALTER TABLE `tour`
   ADD CONSTRAINT `tour_ibfk_1` FOREIGN KEY (`id_region`) REFERENCES `region` (`id`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

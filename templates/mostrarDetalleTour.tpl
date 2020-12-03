@@ -37,17 +37,42 @@
         <div id="error"> 
         </div>
 
-        {if isset($smarty.session.PERMISO_USUARIO)&&($smarty.session.PERMISO_USUARIO==1)}
+        <!--
                 <div class="col-8  w-100">
                         <ul id="comentariosAdmin" class="list-group mt-5 w-100">
                         </ul>     
                 </div>
-        {else}
+       
                 <div class="col-8  w-100">
                         <ul  id="comentarios" class="list-group mt-5 w-100">
                         </ul>  
                 </div>
-        {/if}
+        
+        -->
+
+{if isset($smarty.session.PERMISO_USUARIO)&&($smarty.session.PERMISO_USUARIO==1)}
+        <div class="tabla">
+                <table>
+                        <thead>
+                                <tr>
+                                        <th>Usuario</th>
+                                        <th>Comentario</th>
+                                        <th>Calificacion</th>
+                                        <th>Eliminar</th>                              
+                                </tr>
+                        </thead>
+                    <tbody id="comentariosAdmin">
+                    </tbody>
+                </table>
+        </div>
+{else}
+        <div class="tabla">
+                <table>
+                    <tbody id="comentarios">
+                    </tbody>
+                </table>
+        </div>
+{/if}
 
 
 <!-- script de JS -->

@@ -37,8 +37,7 @@
                     <option value="3">Cuyo</option>
                     <option value="4">Patagonia</option>
                     <option value="5">Cordoba</option>
-                    <option value="6">CABA</option>
-                    <option value="7">Buenos Aires Provincia</option>
+                    <option value="6">Buenos Aires</option>
                 </select>
         </div>
     </div>
